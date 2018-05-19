@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
         {
             case PLAYER_CONTEXT.FREE:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     if (able_to_talk)
                     {
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.ON_DRUGS:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     if (!impulsed)
                     {
@@ -151,7 +151,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -166,13 +166,13 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.Joystick1Button0))
+                if (Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Pass text faster
                     dialogue_manager.FasterLetters();
                 }
 
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0))
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Pass text faster
                     dialogue_manager.SlowLetters();
@@ -230,5 +230,14 @@ public class Player : MonoBehaviour
             npc_to_talk = other.GetComponent<NPC>();
         }
 
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("NPC"))
+        {
+            able_to_talk = false;
+            npc_to_talk = null;
+        }
     }
 }
