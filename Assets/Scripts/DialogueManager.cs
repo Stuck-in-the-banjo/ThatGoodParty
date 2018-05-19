@@ -90,7 +90,11 @@ public class DialogueManager : MonoBehaviour {
             }
             dialogueText.text += letter;
             timeCounter = 0.0f;
-            audioSource.PlayOneShot(soundClip);
+            if(letter != ' ')
+            {
+                audioSource.PlayOneShot(soundClip);
+            }
+            
 
             //Srry for this
             tmp++;
