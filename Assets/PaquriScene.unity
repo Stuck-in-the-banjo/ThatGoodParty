@@ -989,7 +989,7 @@ MonoBehaviour:
   animator: {fileID: 915763124}
   letterTime: 0.03
   audioSource: {fileID: 1516314108}
-  soundClip: {fileID: 8300000, guid: 970def9c141dfd34987648527b5c8f52, type: 3}
+  soundClip: {fileID: 8300000, guid: e1f8fbd2e5168674396bc45f8c9b0936, type: 3}
 --- !u!4 &1516314107
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,9 +1012,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 970def9c141dfd34987648527b5c8f52, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1f8fbd2e5168674396bc45f8c9b0936, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.187
+  m_Volume: 0.45
   m_Pitch: 1
   Loop: 0
   Mute: 0
