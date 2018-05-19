@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -11,8 +12,13 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator animator;
 
+    //Display text
     public float letterTime;
     private float timeCounter = 0.0f;
+
+    //Music
+    public AudioSource audioSource;
+    public AudioClip soundClip;
 
     public void Start()
     {
@@ -59,6 +65,7 @@ public class DialogueManager : MonoBehaviour {
             }
             dialogueText.text += letter;
             timeCounter = 0.0f;
+            audioSource.PlayOneShot(soundClip);
             yield return null;
         }
     }
