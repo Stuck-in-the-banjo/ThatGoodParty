@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     //NPC
     bool able_to_talk = false;
     NPC npc_to_talk = null;
-    public GameObject dialogue_manager;
+    public DialogueManager dialogue_manager;
 
     // Use this for initialization
     void Start()
@@ -84,6 +84,9 @@ public class Player : MonoBehaviour
 
     void HandleAxis()
     {
+        if (player_context == PLAYER_CONTEXT.TALKING)
+            return;
+
         //Horizontal Axis
         current_speed += Input.GetAxis("Horizontal") * acceleration;
         current_speed = Mathf.Clamp(current_speed, -max_speed, max_speed);
@@ -126,6 +129,8 @@ public class Player : MonoBehaviour
                     {
                         player_context = PLAYER_CONTEXT.TALKING;
                         npc_to_talk.TriggerDialogue();
+
+                        Debug.Log("Start talking");
                     }
                 }
 
@@ -149,11 +154,28 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
                     //Close or next sentence
+                    if (dialogue_manager.dialog_finished)
+                    {
+                        player_context = PLAYER_CONTEXT.FREE;
+                        dialogue_manager.EndDialogue();
+                    }
+                    else
+                    {
+                        if (dialogue_manager.sentence_finished)
+                            dialogue_manager.DisplayNextSentence();
+                    }
                 }
 
                 if (Input.GetKey(KeyCode.Joystick1Button0))
                 {
                     //Pass text faster
+                    dialogue_manager.FasterLetters();
+                }
+
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0))
+                {
+                    //Pass text faster
+                    dialogue_manager.SlowLetters();
                 }
 
                 break;
@@ -195,7 +217,7 @@ public class Player : MonoBehaviour
             player_context = PLAYER_CONTEXT.FREE;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Collectable"))
         {
