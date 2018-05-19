@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator animator;
 
+    public float letterTime;
+    private float timeCounter = 0.0f;
+
     public void Start()
     {
         sentences = new Queue<string>();
@@ -39,19 +42,27 @@ public class DialogueManager : MonoBehaviour {
 
         string sentence = sentences.Dequeue();
         //dialogueText.text = sentence;
-        StopAllCoroutines();
+        StopAllCoroutines(); 
         StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        dialogueText.text = "";  
+        
+        foreach (char letter in sentence.ToCharArray())
         {
+            while (timeCounter < letterTime)
+            {
+                timeCounter += Time.deltaTime;
+                yield return null;
+            }
             dialogueText.text += letter;
+            timeCounter = 0.0f;
             yield return null;
         }
     }
+
     public void EndDialogue()
     {
         animator.SetBool("IsOpen", false);

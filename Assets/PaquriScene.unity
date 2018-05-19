@@ -986,6 +986,7 @@ MonoBehaviour:
   nameText: {fileID: 29139866}
   dialogueText: {fileID: 581485573}
   animator: {fileID: 915763124}
+  letterTime: 0.03
 --- !u!4 &1516314107
 Transform:
   m_ObjectHideFlags: 0
