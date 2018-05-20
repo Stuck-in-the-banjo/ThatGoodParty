@@ -215,6 +215,12 @@ public class Player : MonoBehaviour
                 current_speed -= deceleration;
                 current_speed = Mathf.Clamp(current_speed, 0.0f, max_speed);
             }
+
+            GetComponent<Animator>().SetBool("Idle", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Idle", false);
         }
 
         //Vertical Axis
