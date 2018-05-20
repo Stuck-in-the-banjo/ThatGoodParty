@@ -267,6 +267,7 @@ public class Player : MonoBehaviour
                     {
                         impulsed = true;
                         impulse_variation = 0.0f;
+                        GetComponent<Animator>().SetBool("swimming", true);
                     }
                 }
 
@@ -316,6 +317,7 @@ public class Player : MonoBehaviour
                 impulse_variation = 0.0f;
                 current_impulse = 0.0f;
                 impulsed = false;
+                GetComponent<Animator>().SetBool("swimming", false);
             }
 
             Debug.Log("To the sky" + current_impulse);
