@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
         START_DRUGS,
         ON_DRUGS,
         OFF_DRUGS,
-        TALKING
+        TALKING,
+        DEAD
     }
 
     //Move variables
@@ -180,7 +181,7 @@ public class Player : MonoBehaviour
     //All input goes here
     void HandleInput()
     {
-        if (player_context == PLAYER_CONTEXT.START_DRUGS)
+        if (player_context == PLAYER_CONTEXT.START_DRUGS || player_context == PLAYER_CONTEXT.DEAD) 
             return;
 
         //Axis
@@ -366,7 +367,16 @@ public class Player : MonoBehaviour
         player_context = PLAYER_CONTEXT.FREE;
         player_trips++;
         GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
+
         GetComponent<Animator>().SetBool("flying", false);
+
+        if (player_trips == PLAYER_STATE.FIFTH_STATE)
+        {
+            GetComponent<Animator>().SetBool("die", true);
+            player_context = PLAYER_CONTEXT.DEAD;
+        }
+
+       
     }
 
     void OnTriggerEnter(Collider other)
@@ -379,7 +389,7 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(other.CompareTag("NPC") && player_context == PLAYER_CONTEXT.FREE)
+        if(other.CompareTag("NPC"))
         {
             able_to_talk = true;
             npc_to_talk = other.GetComponent<NPC>();
