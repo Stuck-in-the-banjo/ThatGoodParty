@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public enum PLAYER_CONTEXT
     {
         FREE = 0,
+        START_DRUGS,
         ON_DRUGS,
         TALKING
     }
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     //Gameplay variables
     PLAYER_CONTEXT player_context = PLAYER_CONTEXT.FREE;
 
+    //Flying gameplay
     public float max_impulse;
     public float impulse_increment = 0.05f;
     public float max_gravity = 5.0f;
@@ -37,13 +39,16 @@ public class Player : MonoBehaviour
 
     bool impulsed = false;
     float impulse_variation = 0.0f;
+    bool waving = false;
+    float tmp = 0.0f;
 
-    public int score_count = 0;
-
-    //NPC
+    //NPC talk
     bool able_to_talk = false;
     NPC npc_to_talk = null;
     public DialogueManager dialogue_manager;
+
+    //Debug
+    float lolol = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -60,10 +65,50 @@ public class Player : MonoBehaviour
 
         if (player_context == PLAYER_CONTEXT.ON_DRUGS)
         {
+            
+
+
+            if (transform.position.y <= 4.0f)
+            {
+                waving = true;               
+            }
+
+            if (transform.position.y >= 5.5f)
+            {
+                waving = false;
+            }
+
+            if (waving == false)
+            {
+                current_impulse = current_impulse - gravity;
+
+                transform.Translate(0.0f, (current_impulse * Time.deltaTime), 0.0f);
+                current_impulse = Mathf.Clamp(current_impulse, 0.0f, max_impulse);
+
+                tmp = 0.0f;
+            }
+            else
+            {      
+                transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (gravity * Time.deltaTime) + (Mathf.Pow(Mathf.Abs(Mathf.Sin(tmp)) * gravity, 2) * Time.deltaTime), 0.0f);
+                tmp += Time.deltaTime; 
+            }
+
+            Debug.Log(waving);
+        }
+
+        if (player_context == PLAYER_CONTEXT.START_DRUGS)
+        {
+
+            current_impulse = Mathf.Abs(Mathf.Cos(impulse_variation)) * max_impulse * 0.75f;
+            impulse_variation += impulse_increment;
 
             transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (gravity * Time.deltaTime), 0.0f);
 
-            current_impulse = Mathf.Clamp(current_impulse, 0.0f, max_impulse);
+            if (transform.position.y >= 4.0f)
+            {
+                player_context = PLAYER_CONTEXT.ON_DRUGS;
+                //current_impulse = 0.0f;
+            }
         }
 
         //Debug keys
@@ -73,6 +118,9 @@ public class Player : MonoBehaviour
     //All input goes here
     void HandleInput()
     {
+        if (player_context == PLAYER_CONTEXT.START_DRUGS)
+            return;
+
         //Axis
         HandleAxis();
 
@@ -123,7 +171,7 @@ public class Player : MonoBehaviour
         {
             case PLAYER_CONTEXT.FREE:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     if (able_to_talk)
                     {
@@ -138,7 +186,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.ON_DRUGS:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     if (!impulsed)
                     {
@@ -151,7 +199,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -166,13 +214,13 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Pass text faster
                     dialogue_manager.FasterLetters();
                 }
 
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     //Pass text faster
                     dialogue_manager.SlowLetters();
@@ -195,6 +243,8 @@ public class Player : MonoBehaviour
                 impulsed = false;
             }
 
+            Debug.Log("To the sky" + current_impulse);
+
         }
 
     }
@@ -215,16 +265,29 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
             player_context = PLAYER_CONTEXT.FREE;
+
+        if (Input.GetKeyDown(KeyCode.P))
+            StartDrug();
+    }
+
+    void StartDrug()
+    {
+        acceleration = max_acceleration * 0.5f;
+        deceleration = max_deceleration * 0.33f;
+        player_context = PLAYER_CONTEXT.START_DRUGS;
     }
 
     void OnTriggerEnter(Collider other)
     {
+
         if(other.CompareTag("Collectable"))
         {
-            score_count++;
+            //Collectable music
+
+            Destroy(other.gameObject);
         }
 
-        if(other.CompareTag("NPC"))
+        if(other.CompareTag("NPC") && player_context == PLAYER_CONTEXT.FREE)
         {
             able_to_talk = true;
             npc_to_talk = other.GetComponent<NPC>();
@@ -234,7 +297,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("NPC"))
+        if (other.CompareTag("NPC") && player_context == PLAYER_CONTEXT.FREE)
         {
             able_to_talk = false;
             npc_to_talk = null;
