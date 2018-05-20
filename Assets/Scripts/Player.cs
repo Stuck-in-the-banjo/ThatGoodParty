@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
             }
             else
             {      
-                transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (gravity * Time.deltaTime) + (Mathf.Pow(Mathf.Abs(Mathf.Sin(tmp)) * gravity, 2) * Time.deltaTime), 0.0f);
+                transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (initial_gravity * Time.deltaTime) + (Mathf.Pow(Mathf.Abs(Mathf.Sin(tmp)) * initial_gravity, 2) * Time.deltaTime), 0.0f);
                 tmp += Time.deltaTime; 
             }
 
