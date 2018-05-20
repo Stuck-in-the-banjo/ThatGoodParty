@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour {
 
-    public Dialogue dialogue;
+    public Player player_state;
+    public Dialogue[] dialogues;
+
+    private void Start()
+    {
+        dialogues = new Dialogue[5];
+    }
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogues[(int)player_state.player_trips]);
     }
 }

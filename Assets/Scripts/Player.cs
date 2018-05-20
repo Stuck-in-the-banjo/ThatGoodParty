@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     public float fifth_trip;
 
     float trip_timer;
-    PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
+    public PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
     Dictionary<PLAYER_STATE, float> trips;
 
     //Debug
@@ -120,6 +120,14 @@ public class Player : MonoBehaviour
                 transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (initial_gravity * Time.deltaTime) + (Mathf.Pow(Mathf.Abs(Mathf.Sin(tmp)) * initial_gravity, 2) * Time.deltaTime), 0.0f);
                 tmp += Time.deltaTime; 
             }
+
+            //Trip Timing
+            if (trip_timer >= trips[player_trips])
+            {
+                player_context = PLAYER_CONTEXT.OFF_DRUGS;
+                trip_timer = 0.0f;
+            }
+            else trip_timer += Time.deltaTime;
 
             Debug.Log(waving);
         }
@@ -363,7 +371,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("NPC") && player_context == PLAYER_CONTEXT.FREE)
+        if (other.CompareTag("NPC"))
         {
             able_to_talk = false;
             npc_to_talk = null;
