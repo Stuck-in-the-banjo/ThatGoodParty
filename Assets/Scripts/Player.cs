@@ -67,6 +67,9 @@ public class Player : MonoBehaviour
     public PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
     Dictionary<PLAYER_STATE, float> trips;
 
+    //Dsiplay Logic
+    bool flipped = false;
+
     //Debug
     float lolol = 0.0f;
 
@@ -221,6 +224,10 @@ public class Player : MonoBehaviour
             gravity = Mathf.Clamp(gravity, initial_gravity, max_gravity);
             Debug.Log(gravity);
         }
+
+        //Display
+        FlipSprite(Input.GetAxis("Horizontal"));
+
     }
 
     void HandleA()
@@ -376,5 +383,20 @@ public class Player : MonoBehaviour
             able_to_talk = false;
             npc_to_talk = null;
         }
+    }
+
+    void FlipSprite(float value)
+    {
+        if(value < 0.0f)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            flipped = true;
+        }
+        if(value > 0.0f)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            flipped = false;
+        }
+       
     }
 }
