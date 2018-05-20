@@ -362,6 +362,7 @@ public class Player : MonoBehaviour
         gravity = initial_gravity;
         player_context = PLAYER_CONTEXT.FREE;
         player_trips++;
+        GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
     }
 
     void OnTriggerEnter(Collider other)
