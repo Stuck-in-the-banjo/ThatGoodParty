@@ -353,6 +353,7 @@ public class Player : MonoBehaviour
         acceleration = max_acceleration * 0.5f;
         deceleration = max_deceleration * 0.33f;
         player_context = PLAYER_CONTEXT.START_DRUGS;
+        GetComponent<Animator>().SetBool("flying", true);
     }
 
     public void FinishDrug()
@@ -363,6 +364,7 @@ public class Player : MonoBehaviour
         player_context = PLAYER_CONTEXT.FREE;
         player_trips++;
         GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
+        GetComponent<Animator>().SetBool("flying", false);
     }
 
     void OnTriggerEnter(Collider other)
