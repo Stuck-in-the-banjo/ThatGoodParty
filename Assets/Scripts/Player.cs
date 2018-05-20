@@ -7,7 +7,12 @@ public class Player : MonoBehaviour
 
     public enum PLAYER_STATE
     {
-        NO_STATE = 0
+        FIRST_STATE = 0,
+        SECOND_STATE,
+        THIRD_STATE,
+        FOURTH_STATE,
+        FIFTH_STATE,
+        FINISH_STATE
     }
 
     public enum PLAYER_CONTEXT
@@ -15,6 +20,7 @@ public class Player : MonoBehaviour
         FREE = 0,
         START_DRUGS,
         ON_DRUGS,
+        OFF_DRUGS,
         TALKING
     }
 
@@ -42,10 +48,24 @@ public class Player : MonoBehaviour
     bool waving = false;
     float tmp = 0.0f;
 
+    public float distance_to_slow = 8.0f;
+    public float slow_factor = 3.0f;
+
     //NPC talk
     bool able_to_talk = false;
     NPC npc_to_talk = null;
     public DialogueManager dialogue_manager;
+
+    //Drug Timers
+    public float first_trip;
+    public float second_trip;
+    public float third_trip;
+    public float fourth_trip;
+    public float fifth_trip;
+
+    float trip_timer;
+    PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
+    Dictionary<PLAYER_STATE, float> trips;
 
     //Debug
     float lolol = 0.0f;
@@ -56,6 +76,16 @@ public class Player : MonoBehaviour
         acceleration = max_acceleration;
         deceleration = max_deceleration;
         initial_gravity = gravity;
+
+        trips = new Dictionary<PLAYER_STATE, float>();
+
+        //Fill dicctrionary
+        trips[PLAYER_STATE.FIRST_STATE] = first_trip;
+        trips[PLAYER_STATE.SECOND_STATE] = second_trip;
+        trips[PLAYER_STATE.THIRD_STATE] = third_trip;
+        trips[PLAYER_STATE.FOURTH_STATE] = fourth_trip;
+        trips[PLAYER_STATE.FIFTH_STATE] = fifth_trip;
+
     }
 
     // Update is called once per frame
@@ -65,9 +95,7 @@ public class Player : MonoBehaviour
 
         if (player_context == PLAYER_CONTEXT.ON_DRUGS)
         {
-            
-
-
+           
             if (transform.position.y <= 4.0f)
             {
                 waving = true;               
@@ -107,7 +135,30 @@ public class Player : MonoBehaviour
             if (transform.position.y >= 4.0f)
             {
                 player_context = PLAYER_CONTEXT.ON_DRUGS;
-                //current_impulse = 0.0f;
+            }
+        }
+
+        if(player_context == PLAYER_CONTEXT.OFF_DRUGS)
+        {
+            
+
+            float distance_to_floor = transform.position.y;
+
+            if (distance_to_floor < distance_to_slow)
+            {
+                distance_to_floor /= distance_to_slow;
+                Debug.Log(distance_to_floor);
+            }
+            else distance_to_floor = 1.0f;
+
+            transform.Translate(0.0f, -(gravity * Time.deltaTime * distance_to_floor), 0.0f);
+
+            gravity = (gravity + (Time.deltaTime * slow_factor));
+            gravity = Mathf.Clamp(gravity, 0.0f, max_gravity + 4);
+
+            if (distance_to_floor < 0.005f)
+            {
+                FinishDrug();
             }
         }
 
@@ -186,6 +237,9 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.ON_DRUGS:
 
+                if (player_context != PLAYER_CONTEXT.ON_DRUGS)
+                    return;
+
                 if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
                 {
                     if (!impulsed)
@@ -256,25 +310,37 @@ public class Player : MonoBehaviour
 
     void DebugPlayer()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             acceleration = max_acceleration * 0.5f;
             deceleration = max_deceleration * 0.33f;
             player_context = PLAYER_CONTEXT.ON_DRUGS;
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.E))
             player_context = PLAYER_CONTEXT.FREE;
 
         if (Input.GetKeyDown(KeyCode.P))
             StartDrug();
+
+        if (Input.GetKeyDown(KeyCode.O))
+            player_context = PLAYER_CONTEXT.OFF_DRUGS;
     }
 
-    void StartDrug()
+    public void StartDrug()
     {
         acceleration = max_acceleration * 0.5f;
         deceleration = max_deceleration * 0.33f;
         player_context = PLAYER_CONTEXT.START_DRUGS;
+    }
+
+    public void FinishDrug()
+    {
+        acceleration = max_acceleration;
+        deceleration = max_deceleration;
+        gravity = initial_gravity;
+        player_context = PLAYER_CONTEXT.FREE;
+        player_trips++;
     }
 
     void OnTriggerEnter(Collider other)

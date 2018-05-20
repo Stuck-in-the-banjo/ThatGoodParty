@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 416420191}
   - component: {fileID: 416420189}
   - component: {fileID: 416420190}
+  - component: {fileID: 416420194}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: NPC
@@ -307,6 +308,8 @@ MonoBehaviour:
     - sss ss s ss                sssssss sssssssssss
     - 5555555555555555555555555555dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     - 11111111111111111111111
+    finish_in_drug: 0
+    display_time: 0.03
 --- !u!65 &416420190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -371,6 +374,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416420194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 416420188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a96665185fb3b47a0ab32b368003bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmp: 0
+  start_y: 0
 --- !u!1 &458407654
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,11 +418,11 @@ MonoBehaviour:
   nameText: {fileID: 384723718}
   dialogueText: {fileID: 918769630}
   animator: {fileID: 320399477}
-  letterTime: 0.03
   sentence_finished: 0
   dialog_finished: 0
   audioSource: {fileID: 458407656}
   soundClip: {fileID: 8300000, guid: 970def9c141dfd34987648527b5c8f52, type: 3}
+  player_script: {fileID: 1756246348}
 --- !u!82 &458407656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -576,7 +592,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543524530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.2, z: -10}
+  m_LocalPosition: {x: 0, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -588,13 +604,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543524530}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 573d9a7b0d6c02845bcba7cc7348bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1756246347}
   start_follow_distance: 4
+  offset: 2
 --- !u!1 &611682032
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &640735152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,6 +876,8 @@ MonoBehaviour:
     - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     - bb
     - c
+    finish_in_drug: 1
+    display_time: 0.03
 --- !u!23 &680414228
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1178,7 +1197,14 @@ MonoBehaviour:
   max_gravity: 5
   gravity: 2
   initial_gravity: 0
+  distance_to_slow: 8
+  slow_factor: 3
   dialogue_manager: {fileID: 458407655}
+  first_trip: 0
+  second_trip: 0
+  third_trip: 0
+  fourth_trip: 0
+  fifth_trip: 0
 --- !u!23 &1756246349
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -13,28 +13,37 @@ public class DialogueManager : MonoBehaviour {
     public Animator animator;
 
     //Display text
-    public float letterTime;
-    private float draw_time;
+    private float letterTime;
     private float timeCounter = 0.0f;
 
     public bool sentence_finished = false;
     public bool dialog_finished = false;
 
+    //Dialogue variables
+    bool drug_finish;
+    private float draw_time;
+
     //Music
     public AudioSource audioSource;
     public AudioClip soundClip;
 
+    //Player
+    public Player player_script;
+
     public void Start()
     {
         sentences = new Queue<string>();
-
-        draw_time = letterTime;
+        
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         sentence_finished = false;
         dialog_finished = false;
+        drug_finish = dialogue.finish_in_drug;
+
+        letterTime = dialogue.display_time;
+        draw_time = dialogue.display_time;
 
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.NPC_name;
@@ -111,6 +120,11 @@ public class DialogueManager : MonoBehaviour {
     {
         animator.SetBool("IsOpen", false);
         Debug.Log("Ending conversation");
+
+        if(drug_finish)
+        {
+            player_script.StartDrug();
+        }
     }
 
     public void FasterLetters()
