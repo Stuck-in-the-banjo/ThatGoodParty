@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour {
 
     private void Start()
     {
-        dialogues = new Dialogue[5];
+        //dialogues = new Dialogue[5];
     }
 
     public void TriggerDialogue()
