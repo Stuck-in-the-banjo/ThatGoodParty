@@ -138,6 +138,8 @@ public class Player : MonoBehaviour
             if (trip_timer >= trips[player_trips])
             {
                 player_context = PLAYER_CONTEXT.OFF_DRUGS;
+                rave_music.Play();
+                rave_music.volume = 0.0f;
                 trip_timer = 0.0f;
             }
             else trip_timer += Time.deltaTime;
@@ -156,6 +158,21 @@ public class Player : MonoBehaviour
             if (transform.position.y >= 4.0f)
             {
                 player_context = PLAYER_CONTEXT.ON_DRUGS;
+                rave_music.Stop();
+            }
+
+            rave_music.volume -= 1 * Time.deltaTime;
+            rave_music.volume = Mathf.Clamp(rave_music.volume, 0.0f, 1.0f);
+
+            if(player_trips == 0)
+            {
+                first_trip_music.volume += 1 * Time.deltaTime;
+                first_trip_music.volume = Mathf.Clamp(first_trip_music.volume, 0.0f, 1.0f);
+            }
+            else
+            {
+                trip_music.volume += 1 * Time.deltaTime;
+                trip_music.volume = Mathf.Clamp(trip_music.volume, 0.0f, 1.0f);
             }
         }
 
@@ -168,6 +185,26 @@ public class Player : MonoBehaviour
             if (distance_to_floor < distance_to_slow)
             {
                 distance_to_floor /= distance_to_slow;
+
+                if (player_trips != PLAYER_STATE.FIFTH_STATE)
+                {
+
+
+                    rave_music.volume += 1 * Time.deltaTime;
+                    rave_music.volume = Mathf.Clamp(rave_music.volume, 0.0f, 1.0f);
+
+                    if (player_trips == 0)
+                    {
+                        first_trip_music.volume -= 1 * Time.deltaTime;
+                        first_trip_music.volume = Mathf.Clamp(first_trip_music.volume, 0.0f, 1.0f);
+                    }
+                    else
+                    {
+                        trip_music.volume -= 1 * Time.deltaTime;
+                        trip_music.volume = Mathf.Clamp(trip_music.volume, 0.0f, 1.0f);
+                    }
+                }
+
                 Debug.Log(distance_to_floor);
             }
             else distance_to_floor = 1.0f;
@@ -177,10 +214,15 @@ public class Player : MonoBehaviour
             gravity = (gravity + (Time.deltaTime * slow_factor));
             gravity = Mathf.Clamp(gravity, 0.0f, max_gravity);
 
+            
+
             if (distance_to_floor < 0.005f)
             {
                 FinishDrug();
             }
+
+            
+
         }
 
         //Debug keys
@@ -383,12 +425,18 @@ public class Player : MonoBehaviour
             star.gameObject.SetActive(true);
         }
 
-        if (rave_music.isPlaying)
-            rave_music.Stop();
-
+     
+            
         if (player_trips == 0)
+        {
             first_trip_music.Play();
-        else trip_music.Play();
+            first_trip_music.volume = 0.0f;
+        }
+        else
+        {
+            trip_music.Play();
+            trip_music.volume = 0.0f;
+        }
 
     }
 
@@ -420,7 +468,7 @@ public class Player : MonoBehaviour
         GetComponent<Animator>().SetBool("flying", false);
 
         
-        rave_music.Play();
+        
 
         if (first_trip_music.isPlaying)
             first_trip_music.Stop();
