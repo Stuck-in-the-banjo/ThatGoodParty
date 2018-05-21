@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
     //Gameplay variables
     PLAYER_CONTEXT player_context = PLAYER_CONTEXT.FREE;
-    public GameObject stars;
+    public GameObject[] stars_roads;
 
     //Flying gameplay
     public float max_impulse;
@@ -367,9 +367,9 @@ public class Player : MonoBehaviour
         player_context = PLAYER_CONTEXT.START_DRUGS;
         GetComponent<Animator>().SetBool("flying", true);
 
-        stars.SetActive(true);
+        stars_roads[(int)player_trips].SetActive(true);
 
-        Transform[] childs = stars.GetComponentsInChildren<Transform>(true);
+        Transform[] childs = stars_roads[(int)player_trips].GetComponentsInChildren<Transform>(true);
         foreach (Transform star in childs)
         {
             star.gameObject.SetActive(true);
@@ -382,13 +382,10 @@ public class Player : MonoBehaviour
         deceleration = max_deceleration;
         gravity = initial_gravity;
         player_context = PLAYER_CONTEXT.FREE;
-        player_trips++;
-        GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
-        GetComponent<Animator>().SetBool("flying", false);
 
-        stars.SetActive(false);
+        stars_roads[(int)player_trips].SetActive(false);
 
-        Transform[] childs = stars.GetComponentsInChildren<Transform>(true);
+        Transform[] childs = stars_roads[(int)player_trips].GetComponentsInChildren<Transform>(true);
         foreach (Transform star in childs)
         {
             star.gameObject.SetActive(false);
@@ -396,10 +393,15 @@ public class Player : MonoBehaviour
 
         if (player_trips == PLAYER_STATE.FIFTH_STATE)
         {
+            GetComponent<Animator>().SetBool("flying", false);
             GetComponent<Animator>().SetBool("die", true);
             player_context = PLAYER_CONTEXT.DEAD;
+            return;
         }
 
+        player_trips++;
+        GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
+        GetComponent<Animator>().SetBool("flying", false);
        
     }
 
