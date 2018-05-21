@@ -236,7 +236,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                trip_music.volume -= 0.5f * Time.deltaTime;
+                trip_music.volume -= 0.005f * Time.deltaTime;
                 dead_timer += Time.deltaTime;
             }
         }
