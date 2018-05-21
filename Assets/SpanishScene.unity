@@ -7899,31 +7899,14 @@ MonoBehaviour:
   dialogues:
   - NPC_name: Goofy
     sentences:
-    - 'Hey bro! What a nice trip!
-
-
-      It''s your first time here right?'
-    - "I'm glad you are here... \nI don't know you but everybody is welcome.\n\nmistoke"
-    - "This place is the real life bro. \n\nI have a good thing for you, wanna take
-      a look?\n\naaaaaaa\n\naxxax\na\n"
-    - '
-
-
-
-
-      Just, take it easy and reeeelax.'
-    - '
-
-
-
-
-      See you in heaven.'
-    - '
-
-
-
-
-      *eats strange snack*'
+    - "Hey, bro! \xA1Qu\xE9 buen viaje!"
+    - "\xA1Has venido! No se quien eres... pero cualquiera es bienvenido aqu\xED."
+    - "No has venido nunca, \xBFno? \n\n\xA1Se nota! "
+    - "Ese lugar es la vida, hermano. \nHay buen rollo y cero problemas."
+    - "\xBFQuieres ver de lo que hablo? \nS\xF3lo d\xE9jate llevar y disfruta del
+      viaje. "
+    - "Toma lo que me queda. \xA1Te cambiar\xE1 la vida!"
+    - '* agarra algo de cambio de vida *'
     finish_in_drug: 1
     display_time: 0.03
   turn_to_talk: 0
