@@ -24,4 +24,10 @@ public class ButtonManager : MonoBehaviour {
     {
         Application.OpenURL("https://twitter.com/djcerdany");
     }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
