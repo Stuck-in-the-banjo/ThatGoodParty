@@ -5411,6 +5411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 384723718}
   dialogueText: {fileID: 918769630}
+  dialogue_ui: {fileID: 320399475}
   posision: 1000
   animator: {fileID: 320399477}
   sentence_finished: 0
@@ -18233,8 +18234,8 @@ MonoBehaviour:
   distance_to_slow: 8
   slow_factor: 3
   dialogue_manager: {fileID: 458407655}
-  first_trip: 0
-  second_trip: 0
+  first_trip: 30
+  second_trip: 20
   third_trip: 10
   fourth_trip: 5
   fifth_trip: 2

@@ -8,6 +8,9 @@ public class DialogueManager : MonoBehaviour {
 
     public Text nameText;
     public Text dialogueText;
+
+    public GameObject dialogue_ui;
+
     private Queue<string> sentences;
     public float posision = 0;
 
@@ -34,7 +37,8 @@ public class DialogueManager : MonoBehaviour {
     public void Start()
     {
         sentences = new Queue<string>();
-        
+        dialogue_ui.SetActive(false);
+
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -46,7 +50,7 @@ public class DialogueManager : MonoBehaviour {
         letterTime = dialogue.display_time;
         draw_time = dialogue.display_time;
 
-        animator.SetBool("IsOpen", true);
+        dialogue_ui.SetActive(true);
         nameText.text = dialogue.NPC_name;
         sentences.Clear();
 
@@ -120,7 +124,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        dialogue_ui.SetActive(false);
         Debug.Log("Ending conversation");
 
         if(drug_finish)
