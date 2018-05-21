@@ -395,16 +395,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_state: {fileID: 1756246348}
   dialogues:
-  - NPC_name: Paquito
+  - NPC_name: Crocaine
     sentences:
-    - HOLA HOLA
+    - '
+
+
+
+
+      What''s up folk!'
+    - '
+
+
+
+
+      You are higher than any other.
+
+
+      Don''t look at me instead you want a punch in your face.'
+    - '
+
+
+
+
+      Or maybe sink your company...
+
+
+      I am broker, well... I was.'
+    - '
+
+
+
+
+      Until I took too much...
+
+
+      But this place is better for me. Here I can waste all my fucking savings.'
+    - '
+
+
+
+
+      What you want fool?
+
+
+      More shet??'
+    - '
+
+
+
+
+      Yeahhhhh! That''s It!
+
+
+      Take It'
+    - '
+
+
+
+
+      *takes some of It*'
     finish_in_drug: 1
     display_time: 0.03
-  - NPC_name: pAQUITO
-    sentences:
-    - DEW DEW
-    finish_in_drug: 1
-    display_time: 0.06
   turn_to_talk: 3
 --- !u!4 &22077808
 Transform:
