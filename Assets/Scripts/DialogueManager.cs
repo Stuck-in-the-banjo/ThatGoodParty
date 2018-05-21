@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour {
     public Text nameText;
     public Text dialogueText;
     private Queue<string> sentences;
+    public float posision = 0;
 
     public Animator animator;
 
@@ -87,6 +88,7 @@ public class DialogueManager : MonoBehaviour {
     {
         sentence_finished = false;
         dialogueText.text = "";
+        dialogueText.transform.position = new Vector3(dialogueText.transform.position.x, posision, dialogueText.transform.position.z);
 
         int tmp = 0;
 

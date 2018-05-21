@@ -1931,7 +1931,7 @@ RectTransform:
   m_GameObject: {fileID: 320399475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 384723720}
   - {fileID: 918769633}
@@ -1941,8 +1941,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 383.78, y: 332.5}
+  m_AnchoredPosition: {x: 16, y: 105}
+  m_SizeDelta: {x: 390, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &320399477
 Animator:
@@ -1951,7 +1951,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320399475}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9fbace0a00d85ca4b95f3f9c480b23e7, type: 2}
   m_CullingMode: 0
@@ -1980,7 +1980,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b8d0c0f91812a6540a91dc15f923ca14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2284,8 +2284,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 48.300003, y: 19}
-  m_SizeDelta: {x: 60, y: -70}
+  m_AnchoredPosition: {x: 2.3, y: 50.8}
+  m_SizeDelta: {x: -25.700005, y: -128.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &393139634
 GameObject:
@@ -2746,6 +2746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 384723718}
   dialogueText: {fileID: 918769630}
+  posision: 1000
   animator: {fileID: 320399477}
   sentence_finished: 0
   dialog_finished: 0
@@ -3586,7 +3587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &611682033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3975,9 +3976,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_state: {fileID: 1756246348}
   dialogues:
-  - NPC_name: Paquito
+  - NPC_name: Goofy
     sentences:
-    - HOLA HOLA
+    - '
+
+
+
+
+      HOLA HOLA
+
+      pesisssssssssssssssssssssssssssssssss
+
+      cv
+
+      c
+
+      s
+
+      a'
+    - '
+
+
+
+
+      HOLA HOLA
+
+      pesisssssssssssssssssssssssssssssssss
+
+      cv
+
+      c
+
+      s
+
+      a'
     finish_in_drug: 1
     display_time: 0.03
   - NPC_name: pAQUITO
@@ -5388,8 +5420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3, y: 0.9200001}
-  m_SizeDelta: {x: 323.2, y: 197.5}
+  m_AnchoredPosition: {x: 0.7, y: 11.3}
+  m_SizeDelta: {x: 358.96, y: 133.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &938062084
 GameObject:
