@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
     bool able_to_talk = false;
     NPC npc_to_talk = null;
     public DialogueManager dialogue_manager;
+    public GameObject dialogue_ui;
 
     //Drug Timers
     public float first_trip;
@@ -68,6 +69,13 @@ public class Player : MonoBehaviour
     float trip_timer;
     public PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
     Dictionary<PLAYER_STATE, float> trips;
+
+    //Audio
+    public AudioSource pick_star_audio;
+    public AudioSource first_trip_music;
+    public AudioSource trip_music;
+
+    public AudioSource rave_music;
 
     //Dsiplay Logic
     bool flipped = false;
@@ -374,6 +382,14 @@ public class Player : MonoBehaviour
         {
             star.gameObject.SetActive(true);
         }
+
+        if (rave_music.isPlaying)
+            rave_music.Stop();
+
+        if (player_trips == 0)
+            first_trip_music.Play();
+        else trip_music.Play();
+
     }
 
     public void FinishDrug()
@@ -402,7 +418,16 @@ public class Player : MonoBehaviour
         player_trips++;
         GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
         GetComponent<Animator>().SetBool("flying", false);
-       
+
+        
+        rave_music.Play();
+
+        if (first_trip_music.isPlaying)
+            first_trip_music.Stop();
+
+        if (trip_music.isPlaying)
+            trip_music.Stop();
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -411,6 +436,7 @@ public class Player : MonoBehaviour
         if(other.CompareTag("Collectable"))
         {
             //Collectable music
+            pick_star_audio.Play();
 
             other.gameObject.SetActive(false);
         }
