@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -57,7 +58,6 @@ public class Player : MonoBehaviour
     bool able_to_talk = false;
     NPC npc_to_talk = null;
     public DialogueManager dialogue_manager;
-    public GameObject dialogue_ui;
 
     //Drug Timers
     public float first_trip;
@@ -65,6 +65,8 @@ public class Player : MonoBehaviour
     public float third_trip;
     public float fourth_trip;
     public float fifth_trip;
+
+    float dead_timer = 0.0f;
 
     float trip_timer;
     public PLAYER_STATE player_trips = PLAYER_STATE.FIRST_STATE;
@@ -223,6 +225,20 @@ public class Player : MonoBehaviour
 
             
 
+        }
+
+        if(player_context == PLAYER_CONTEXT.DEAD)
+        {
+
+            if (dead_timer >= 8.0f)
+            {
+                SceneManager.LoadScene("TheEnd");
+            }
+            else
+            {
+                trip_music.volume -= 0.5f * Time.deltaTime;
+                dead_timer += Time.deltaTime;
+            }
         }
 
         //Debug keys
