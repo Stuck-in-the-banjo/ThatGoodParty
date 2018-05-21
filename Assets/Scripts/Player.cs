@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
 
     //Gameplay variables
     PLAYER_CONTEXT player_context = PLAYER_CONTEXT.FREE;
+    public GameObject stars;
 
     //Flying gameplay
     public float max_impulse;
@@ -333,7 +334,7 @@ public class Player : MonoBehaviour
     bool IsInsideMap()
     {
 
-        if ((transform.position.x + (current_speed * Time.deltaTime)) <= 10 && (transform.position.x + (current_speed * Time.deltaTime)) >= -10)
+        if ((transform.position.x + (current_speed * Time.deltaTime)) <= 8.25f && (transform.position.x + (current_speed * Time.deltaTime)) >= -8.25f)
             return true;
 
         
@@ -365,6 +366,14 @@ public class Player : MonoBehaviour
         deceleration = max_deceleration * 0.33f;
         player_context = PLAYER_CONTEXT.START_DRUGS;
         GetComponent<Animator>().SetBool("flying", true);
+
+        stars.SetActive(true);
+
+        Transform[] childs = stars.GetComponentsInChildren<Transform>(true);
+        foreach (Transform star in childs)
+        {
+            star.gameObject.SetActive(true);
+        }
     }
 
     public void FinishDrug()
@@ -375,8 +384,15 @@ public class Player : MonoBehaviour
         player_context = PLAYER_CONTEXT.FREE;
         player_trips++;
         GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
-
         GetComponent<Animator>().SetBool("flying", false);
+
+        stars.SetActive(false);
+
+        Transform[] childs = stars.GetComponentsInChildren<Transform>();
+        foreach (Transform star in childs)
+        {
+            star.gameObject.SetActive(false);
+        }
 
         if (player_trips == PLAYER_STATE.FIFTH_STATE)
         {
@@ -394,7 +410,7 @@ public class Player : MonoBehaviour
         {
             //Collectable music
 
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
 
         if(other.CompareTag("NPC"))
