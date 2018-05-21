@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
             transform.Translate(0.0f, -(gravity * Time.deltaTime * distance_to_floor), 0.0f);
 
             gravity = (gravity + (Time.deltaTime * slow_factor));
-            gravity = Mathf.Clamp(gravity, 0.0f, max_gravity + 4);
+            gravity = Mathf.Clamp(gravity, 0.0f, max_gravity);
 
             if (distance_to_floor < 0.005f)
             {
