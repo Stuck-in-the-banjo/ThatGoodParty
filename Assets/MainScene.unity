@@ -5040,7 +5040,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_state: {fileID: 1756246348}
-  dialogues: []
+  dialogues:
+  - NPC_name: John Rath
+    sentences:
+    - '
+
+
+
+
+      This shiet is better than kill those little bastards in Vietnam!'
+    - '
+
+
+
+
+      Isn''t It? hahaha'
+    - '
+
+
+
+
+      Oh, you tasted that thing from Goofy. Good shiet isn''t It?'
+    - '
+
+
+
+
+      My Wife told me that I''ve sould leave that but a couple of slaps and She regreted.
+
+
+'
+    - '
+
+
+
+
+      Maybe that explains the restraining order in the mailbox...'
+    - '
+
+
+
+
+      Ah... don''t worry I''m ok with that.
+
+
+      Now I can come here and have some fun, you know.'
+    - '
+
+
+
+
+      Uh? You want more of Goofie''s thing?
+
+
+      Did you already carried off? hahahhaha
+
+
+      I understand... '
+    - '
+
+
+
+
+      Don''t worry, I have more for you.
+
+
+      Take this.'
+    - '
+
+
+
+
+      *picks that thing from the strange*'
+    finish_in_drug: 0
+    display_time: 0
 --- !u!65 &416420190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10969,7 +11042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.70000005, y: 11.299999}
+  m_AnchoredPosition: {x: 8, y: 11.299999}
   m_SizeDelta: {x: 358.96, y: 133.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &932984669
