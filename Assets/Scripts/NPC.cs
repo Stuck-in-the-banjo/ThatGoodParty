@@ -6,6 +6,7 @@ public class NPC : MonoBehaviour {
 
     public Player player_state;
     public Dialogue[] dialogues;
+    public int turn_to_talk;
 
     private void Start()
     {
@@ -14,6 +15,8 @@ public class NPC : MonoBehaviour {
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogues[(int)player_state.player_trips]);
+
+        if(turn_to_talk == (int)player_state.player_trips)
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogues[0]);
     }
 }

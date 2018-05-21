@@ -489,7 +489,7 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if(other.CompareTag("NPC"))
+        if(other.CompareTag("NPC") && (int)player_trips == other.GetComponent<NPC>().turn_to_talk)
         {
             able_to_talk = true;
             npc_to_talk = other.GetComponent<NPC>();
