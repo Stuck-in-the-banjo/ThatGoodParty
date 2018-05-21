@@ -447,7 +447,7 @@ MonoBehaviour:
       Yeahhhhh! That''s It!
 
 
-      Take It'
+      Take It.'
     - '
 
 
@@ -14684,15 +14684,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_state: {fileID: 1756246348}
   dialogues:
-  - NPC_name: Paquito
-    sentences: []
+  - NPC_name: Heroine
+    sentences:
+    - '
+
+
+
+
+      You begging again?
+
+
+      What do you want?'
+    - '
+
+
+
+
+      Ah... yeah.
+
+
+      Don''t say more. I''m psychoanalyst.'
+    - '
+
+
+
+
+      I know It perfectly. And I know you are just a shitty junkie.'
+    - '
+
+
+
+
+      You are just a selfish that just make friends to get high.
+
+
+      Are you still looking for more of that?
+
+'
+    - '
+
+
+
+
+      Don''t answer that question, I know what you gonna say.'
+    - '
+
+
+
+
+      Come on, take It all.
+
+
+      Eat It all come on, forget about everything.'
+    - '
+
+
+
+
+      You will be always come back for more.'
+    - '
+
+
+
+
+      *takes some of more*'
     finish_in_drug: 1
     display_time: 0.03
-  - NPC_name: pAQUITO
-    sentences:
-    - DEW DEW
-    finish_in_drug: 1
-    display_time: 0.06
   turn_to_talk: 4
 --- !u!4 &1193175377
 Transform:
