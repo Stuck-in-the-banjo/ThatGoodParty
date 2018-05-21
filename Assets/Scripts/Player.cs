@@ -201,7 +201,10 @@ public class Player : MonoBehaviour
         //Horizontal Axis
         current_speed += Input.GetAxis("Horizontal") * acceleration;
         current_speed = Mathf.Clamp(current_speed, -max_speed, max_speed);
-        transform.Translate(current_speed * Time.deltaTime, 0.0f, 0.0f);
+
+        if(IsInsideMap())
+            transform.Translate(current_speed * Time.deltaTime, 0.0f, 0.0f);
+        
 
         if (Input.GetAxis("Horizontal") == 0.0f)
         {
@@ -327,9 +330,14 @@ public class Player : MonoBehaviour
 
     }
 
-    void HandleB()
+    bool IsInsideMap()
     {
 
+        if ((transform.position.x + (current_speed * Time.deltaTime)) <= 10 && (transform.position.x + (current_speed * Time.deltaTime)) >= -10)
+            return true;
+
+        
+        return false;
     }
 
     void DebugPlayer()
