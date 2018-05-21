@@ -388,7 +388,7 @@ public class Player : MonoBehaviour
 
         stars.SetActive(false);
 
-        Transform[] childs = stars.GetComponentsInChildren<Transform>();
+        Transform[] childs = stars.GetComponentsInChildren<Transform>(true);
         foreach (Transform star in childs)
         {
             star.gameObject.SetActive(false);
@@ -417,6 +417,18 @@ public class Player : MonoBehaviour
         {
             able_to_talk = true;
             npc_to_talk = other.GetComponent<NPC>();
+
+            if(player_context == PLAYER_CONTEXT.FREE)
+            {
+                Transform[] childs = other.GetComponentsInChildren<Transform>(true);
+
+                foreach(Transform child in childs)
+                {
+                    if (child.CompareTag("DialogueLoad"))
+                        child.gameObject.SetActive(true);
+                }
+            }
+
         }
 
     }
@@ -427,6 +439,16 @@ public class Player : MonoBehaviour
         {
             able_to_talk = false;
             npc_to_talk = null;
+
+            
+            Transform[] childs = other.GetComponentsInChildren<Transform>(true);
+
+            foreach (Transform child in childs)
+            {
+                if (child.CompareTag("DialogueLoad"))
+                    child.gameObject.SetActive(false);
+            }
+            
         }
     }
 

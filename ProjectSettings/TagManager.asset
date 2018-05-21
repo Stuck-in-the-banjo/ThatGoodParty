@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Collectable
+  - DialogueLoad
   layers:
   - Default
   - TransparentFX
