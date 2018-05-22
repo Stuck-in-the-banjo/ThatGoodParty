@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7e9cc98d740b3e44d938a3fe9a666fd1
-timeCreated: 1526855595
+guid: e4a91ac76b13ac149830ffb219857c43
+timeCreated: 1526993445
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -117,8 +117,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 348
-        height: 378
+        width: 336
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: Cocodrilo_1
       rect:
         serializedVersion: 2
-        x: 348
+        x: 336
         y: 0
-        width: 348
-        height: 378
+        width: 336
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: aecba465eedc617449988cb0b7a0d0fd
-timeCreated: 1526855619
+guid: 520d1f46ea8f3f249b3832685faac32a
+timeCreated: 1526993469
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -117,8 +117,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 348
-        height: 378
+        width: 336
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: CocodriloBlancos_1
       rect:
         serializedVersion: 2
-        x: 348
+        x: 336
         y: 0
-        width: 348
-        height: 378
+        width: 336
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
