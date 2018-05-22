@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour {
     private List<Image> imageList;
 
     private int indice = 0;
+    private bool onHold = false;
 
     private bool onPause = false;
 	// Use this for initialization
@@ -68,35 +69,39 @@ public class PauseMenu : MonoBehaviour {
         if(onPause)
         {
             // Up
-            if (Input.GetAxis("Vertical") > 0.0f)
+            if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
             {
                 if(indice == 0)
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice = (imageList.Count-1);
                     imageList[indice].gameObject.SetActive(true);
+                    onHold = false;
                 }
                 else
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice--;
                     imageList[indice].gameObject.SetActive(true);
+                    onHold = false;
                 }
             }
             // Down
-            else if (Input.GetAxis("Vertical") < 0.0f)
+            else if (Input.GetAxis("Vertical") < 0.0f && onHold == true)
             {
                 if (indice == (imageList.Count-1))
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice = 0;
                     imageList[indice].gameObject.SetActive(true);
+                    onHold = false;
                 }
                 else
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice++;
                     imageList[indice].gameObject.SetActive(true);
+                    onHold = false;
                 }
             }
             // Make action
@@ -120,9 +125,12 @@ public class PauseMenu : MonoBehaviour {
                     Application.Quit();
                 }
             }
+            if (Input.GetAxis("Vertical") == 0)
+            {
+                onHold = true;
+            }
         }
     }
-
     public void ResumeGame()
     {
         Time.timeScale = 1;
