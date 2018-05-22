@@ -79,6 +79,9 @@ public class Player : MonoBehaviour
 
     public AudioSource rave_music;
 
+    //Animations
+    Animator anim;
+
     //Dsiplay Logic
     bool flipped = false;
 
@@ -100,6 +103,8 @@ public class Player : MonoBehaviour
         trips[PLAYER_STATE.THIRD_STATE] = third_trip;
         trips[PLAYER_STATE.FOURTH_STATE] = fourth_trip;
         trips[PLAYER_STATE.FIFTH_STATE] = fifth_trip;
+
+        anim = GetComponent<Animator>();
 
     }
 
@@ -180,14 +185,16 @@ public class Player : MonoBehaviour
 
         if(player_context == PLAYER_CONTEXT.OFF_DRUGS)
         {
-            
 
+            anim.SetBool("falling", true);
             float distance_to_floor = transform.position.y;
 
             if (distance_to_floor < distance_to_slow)
             {
+                anim.SetBool("falling", false);
                 distance_to_floor /= distance_to_slow;
 
+                //Music
                 if (player_trips != PLAYER_STATE.FIFTH_STATE)
                 {
 
@@ -287,11 +294,11 @@ public class Player : MonoBehaviour
                 current_speed = Mathf.Clamp(current_speed, 0.0f, max_speed);
             }
 
-            GetComponent<Animator>().SetBool("Idle", true);
+            anim.SetBool("Idle", true);
         }
         else
         {
-            GetComponent<Animator>().SetBool("Idle", false);
+            anim.SetBool("Idle", false);
         }
 
         //Vertical Axis
@@ -338,7 +345,7 @@ public class Player : MonoBehaviour
                     {
                         impulsed = true;
                         impulse_variation = 0.0f;
-                        GetComponent<Animator>().SetBool("swimming", true);
+                        anim.SetBool("swimming", true);
                     }
                 }
 
@@ -388,7 +395,7 @@ public class Player : MonoBehaviour
                 impulse_variation = 0.0f;
                 current_impulse = 0.0f;
                 impulsed = false;
-                GetComponent<Animator>().SetBool("swimming", false);
+                anim.SetBool("swimming", false);
             }
 
             Debug.Log("To the sky" + current_impulse);
@@ -431,7 +438,7 @@ public class Player : MonoBehaviour
         acceleration = max_acceleration * 0.5f;
         deceleration = max_deceleration * 0.33f;
         player_context = PLAYER_CONTEXT.START_DRUGS;
-        GetComponent<Animator>().SetBool("flying", true);
+        anim.SetBool("flying", true);
 
         stars_roads[(int)player_trips].SetActive(true);
 
@@ -465,6 +472,8 @@ public class Player : MonoBehaviour
 
         stars_roads[(int)player_trips].SetActive(false);
 
+        transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+
         Transform[] childs = stars_roads[(int)player_trips].GetComponentsInChildren<Transform>(true);
         foreach (Transform star in childs)
         {
@@ -473,15 +482,15 @@ public class Player : MonoBehaviour
 
         if (player_trips == PLAYER_STATE.FIFTH_STATE)
         {
-            GetComponent<Animator>().SetBool("flying", false);
-            GetComponent<Animator>().SetBool("die", true);
+            anim.SetBool("flying", false);
+            anim.SetBool("die", true);
             player_context = PLAYER_CONTEXT.DEAD;
             return;
         }
 
         player_trips++;
-        GetComponent<Animator>().SetInteger("Player_State", (int)player_trips);
-        GetComponent<Animator>().SetBool("flying", false);
+        anim.SetInteger("Player_State", (int)player_trips);
+        anim.SetBool("flying", false);
 
         
         
