@@ -61,7 +61,9 @@ public class PauseMenu : MonoBehaviour {
             {
                 Time.timeScale = 0;
                 pauseCanvas.gameObject.SetActive(true);
-                imageList[0].gameObject.SetActive(true);
+                imageList[indice].gameObject.SetActive(false);
+                indice = 0;
+                imageList[indice].gameObject.SetActive(true);
                 onPause = true;
             }
 
@@ -69,8 +71,18 @@ public class PauseMenu : MonoBehaviour {
         // Menu navigation
         if(onPause)
         {
-            // Up
-            if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 1"))
+            {
+                audioSource.Play();
+                if (pauseCanvas.isActiveAndEnabled)
+                {
+                    onPause = false;
+                    Time.timeScale = 1;
+                    pauseCanvas.gameObject.SetActive(false);
+                }
+            }
+                // Up
+                if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
             {
                 if(indice == 0)
                 {
@@ -108,7 +120,9 @@ public class PauseMenu : MonoBehaviour {
             // Make action
             if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
             {
-                if(buttonList[indice] == resume)
+                onPause = false;
+                audioSource.Play();
+                if (buttonList[indice] == resume)
                 {
                     ResumeGame();
                 }
