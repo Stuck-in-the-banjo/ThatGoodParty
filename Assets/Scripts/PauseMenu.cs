@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour {
         imageList.Add(restartImg);
         imageList.Add(mainmenuImg);
         imageList.Add(exitImg);
+        Time.timeScale = 1;
     }
 	
 	// Update is called once per frame
