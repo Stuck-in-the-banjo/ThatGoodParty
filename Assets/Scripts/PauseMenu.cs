@@ -21,6 +21,8 @@ public class PauseMenu : MonoBehaviour {
     public Button exitGame;
     public Image exitImg;
 
+    public GameObject camera;
+
     private List<Button> buttonList;
     private List<Image> imageList;
 
@@ -56,12 +58,14 @@ public class PauseMenu : MonoBehaviour {
             audioSource.Play();
             if (pauseCanvas.isActiveAndEnabled)
             {
+                camera.GetComponent<BlurShader>().enabled = false;
                 onPause = false;
                 Time.timeScale = 1;
                 pauseCanvas.gameObject.SetActive(false);
             }
             else
             {
+                camera.GetComponent<BlurShader>().enabled = true;
                 Time.timeScale = 0;
                 pauseCanvas.gameObject.SetActive(true);
                 imageList[indice].gameObject.SetActive(false);
@@ -76,6 +80,7 @@ public class PauseMenu : MonoBehaviour {
         {
             if ((Input.GetKeyDown(KeyCode.Escape) && escActive == false) || Input.GetKeyDown("joystick button 1"))
             {
+                camera.GetComponent<BlurShader>().enabled = false;
                 audioSource.Play();
                 if (pauseCanvas.isActiveAndEnabled)
                 {
@@ -159,6 +164,7 @@ public class PauseMenu : MonoBehaviour {
     }
     public void ResumeGame()
     {
+        camera.GetComponent<BlurShader>().enabled = false;
         onPause = false;
         Time.timeScale = 1;
         pauseCanvas.gameObject.SetActive(false);

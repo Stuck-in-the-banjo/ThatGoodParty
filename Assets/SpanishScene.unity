@@ -6180,6 +6180,7 @@ GameObject:
   - component: {fileID: 543524531}
   - component: {fileID: 543524535}
   - component: {fileID: 543524536}
+  - component: {fileID: 543524537}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6276,6 +6277,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EffectMaterial: {fileID: 2100000, guid: a1018fb46db223f478b315ec518d938d, type: 2}
+--- !u!114 &543524537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543524530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5f9fa77b4329a4bb104344d5169e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlurMaterial: {fileID: 2100000, guid: f1cf38398e2592d419f5fa91ad6af6de, type: 2}
+  iterations: 4
+  downResolution: 3
 --- !u!1 &545718226
 GameObject:
   m_ObjectHideFlags: 0
@@ -21254,6 +21269,7 @@ MonoBehaviour:
   mainmenuImg: {fileID: 1635635735}
   exitGame: {fileID: 821356112}
   exitImg: {fileID: 1010588367}
+  camera: {fileID: 543524530}
 --- !u!82 &1756246359
 AudioSource:
   m_ObjectHideFlags: 0
