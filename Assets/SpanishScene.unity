@@ -3738,7 +3738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a9ac579e9b4dfa843af4fceaf5bea48d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.376
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -21068,9 +21068,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c2307de529d8d1647b24baeb4ad34bab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a9ac579e9b4dfa843af4fceaf5bea48d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.376
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -21126,7 +21126,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -21151,6 +21151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1756246359}
+  clickSound: {fileID: 1756246357}
   pauseCanvas: {fileID: 612582341}
   resume: {fileID: 1993745449}
   resumeImg: {fileID: 1100941570}

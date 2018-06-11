@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
     public AudioSource audioSource;
+    public AudioSource clickSound;
     public Canvas pauseCanvas;
 
     // Pause Buttons
@@ -84,7 +85,8 @@ public class PauseMenu : MonoBehaviour {
                 // Up
                 if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
             {
-                if(indice == 0)
+                clickSound.Play();
+                if (indice == 0)
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice = (imageList.Count-1);
@@ -102,6 +104,7 @@ public class PauseMenu : MonoBehaviour {
             // Down
             else if (Input.GetAxis("Vertical") < 0.0f && onHold == true)
             {
+                clickSound.Play();
                 if (indice == (imageList.Count-1))
                 {
                     imageList[indice].gameObject.SetActive(false);
@@ -121,7 +124,7 @@ public class PauseMenu : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
             {
                 onPause = false;
-                audioSource.Play();
+                clickSound.Play();
                 if (buttonList[indice] == resume)
                 {
                     ResumeGame();
@@ -148,6 +151,7 @@ public class PauseMenu : MonoBehaviour {
     }
     public void ResumeGame()
     {
+        onPause = false;
         Time.timeScale = 1;
         pauseCanvas.gameObject.SetActive(false);
     }
