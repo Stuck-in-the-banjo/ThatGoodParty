@@ -82,6 +82,19 @@ public class Player : MonoBehaviour
     //Animations
     Animator anim;
 
+    //Shaders
+    public Material tripShader;
+    private float shaderFadeCount = 0.0f;
+    [Range(0.0f, 0.02f)]
+    public float firstTripShader = 0.0f;
+    [Range(0.0f, 0.02f)]
+    public float secondTripShader = 0.0f;
+    [Range(0.0f, 0.02f)]
+    public float thirdTripShader = 0.0f;
+    [Range(0.0f, 0.02f)]
+    public float fourthTripShader = 0.0f;
+    private bool tripOffDrugs = false;
+
     //Dsiplay Logic
     bool flipped = false;
 
@@ -106,16 +119,23 @@ public class Player : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
+        //Set trip shader to 0
+        tripShader.SetFloat("_Magnitude", 0.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleInput();
-
+       
+        //Set trip shader to 0
+        if(tripOffDrugs == false && shaderFadeCount != 0.0f)
+        {
+            OffTripShader();
+        }
         if (player_context == PLAYER_CONTEXT.ON_DRUGS)
         {
-           
+            
             if (transform.position.y <= 4.0f)
             {
                 waving = true;               
@@ -144,6 +164,7 @@ public class Player : MonoBehaviour
             //Trip Timing
             if (trip_timer >= trips[player_trips])
             {
+                tripOffDrugs = false;
                 player_context = PLAYER_CONTEXT.OFF_DRUGS;
                 rave_music.Play();
                 rave_music.volume = 0.0f;
@@ -156,7 +177,7 @@ public class Player : MonoBehaviour
 
         if (player_context == PLAYER_CONTEXT.START_DRUGS)
         {
-
+            SetTripShader();
             current_impulse = Mathf.Abs(Mathf.Cos(impulse_variation)) * max_impulse * 0.75f;
             impulse_variation += impulse_increment;
 
@@ -223,15 +244,10 @@ public class Player : MonoBehaviour
             gravity = (gravity + (Time.deltaTime * slow_factor));
             gravity = Mathf.Clamp(gravity, 0.0f, max_gravity);
 
-            
-
             if (distance_to_floor < 0.005f)
             {
                 FinishDrug();
             }
-
-            
-
         }
 
         if(player_context == PLAYER_CONTEXT.DEAD)
@@ -572,5 +588,55 @@ public class Player : MonoBehaviour
             flipped = false;
         }
        
+    }
+
+    void SetTripShader()
+    {
+        tripOffDrugs = true;
+        if (trips[player_trips] == first_trip)
+        {
+            if(shaderFadeCount < firstTripShader)
+            {
+                shaderFadeCount += 0.0001f;
+                tripShader.SetFloat("_Magnitude", shaderFadeCount);
+            } 
+        }
+        else if(trips[player_trips] == second_trip)
+        {
+            if (shaderFadeCount < secondTripShader)
+            {
+                shaderFadeCount += 0.0001f;
+                tripShader.SetFloat("_Magnitude", shaderFadeCount);
+            }
+        }
+        else if (trips[player_trips] == third_trip)
+        {
+            if (shaderFadeCount < thirdTripShader)
+            {
+                shaderFadeCount += 0.0001f;
+                tripShader.SetFloat("_Magnitude", shaderFadeCount);
+            }
+        }
+        else if (trips[player_trips] == fourth_trip)
+        {
+            if (shaderFadeCount < fourthTripShader)
+            {
+                shaderFadeCount += 0.0001f;
+                tripShader.SetFloat("_Magnitude", shaderFadeCount);
+            }
+        }  
+    }
+    void OffTripShader()
+    {
+        if (shaderFadeCount > 0.0f)
+        {
+            shaderFadeCount -= 0.0001f;
+            tripShader.SetFloat("_Magnitude", shaderFadeCount);
+        }
+        else
+        {
+            tripShader.SetFloat("_Magnitude", 0.0f);
+            tripOffDrugs = true;
+        }   
     }
 }

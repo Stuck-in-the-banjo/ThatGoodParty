@@ -20815,16 +20815,21 @@ MonoBehaviour:
   distance_to_slow: 8
   slow_factor: 3
   dialogue_manager: {fileID: 458407655}
-  first_trip: 30
+  first_trip: 10
   second_trip: 20
-  third_trip: 10
-  fourth_trip: 5
-  fifth_trip: 2
+  third_trip: 30
+  fourth_trip: 40
+  fifth_trip: 40
   player_trips: 0
   pick_star_audio: {fileID: 1756246357}
   first_trip_music: {fileID: 1756246356}
   trip_music: {fileID: 1756246355}
   rave_music: {fileID: 1756246354}
+  tripShader: {fileID: 2100000, guid: a1018fb46db223f478b315ec518d938d, type: 2}
+  firstTripShader: 0.002
+  secondTripShader: 0.004
+  thirdTripShader: 0.006
+  fourthTripShader: 0.008
 --- !u!95 &1756246349
 Animator:
   serializedVersion: 3
