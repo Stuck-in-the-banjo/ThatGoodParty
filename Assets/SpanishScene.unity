@@ -6179,6 +6179,7 @@ GameObject:
   - component: {fileID: 543524532}
   - component: {fileID: 543524531}
   - component: {fileID: 543524535}
+  - component: {fileID: 543524536}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6263,6 +6264,18 @@ MonoBehaviour:
   player: {fileID: 1756246347}
   start_follow_distance: 4
   offset: 2
+--- !u!114 &543524536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543524530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb9846cebd2da14f86490f295307f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectMaterial: {fileID: 2100000, guid: a1018fb46db223f478b315ec518d938d, type: 2}
 --- !u!1 &545718226
 GameObject:
   m_ObjectHideFlags: 0
