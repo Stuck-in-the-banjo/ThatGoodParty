@@ -28,7 +28,9 @@ public class PauseMenu : MonoBehaviour {
     private bool onHold = false;
 
     private bool onPause = false;
-	// Use this for initialization
+    // Bug fixing with Esc key
+    private bool escActive = false;
+
 	void Start ()
     {
         buttonList = new List<Button>();
@@ -66,13 +68,13 @@ public class PauseMenu : MonoBehaviour {
                 indice = 0;
                 imageList[indice].gameObject.SetActive(true);
                 onPause = true;
+                escActive = true;
             }
-
         }
         // Menu navigation
         if(onPause)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 1"))
+            if ((Input.GetKeyDown(KeyCode.Escape) && escActive == false) || Input.GetKeyDown("joystick button 1"))
             {
                 audioSource.Play();
                 if (pauseCanvas.isActiveAndEnabled)
@@ -147,6 +149,12 @@ public class PauseMenu : MonoBehaviour {
             {
                 onHold = true;
             }
+
+            //Bug fixing with Esc key
+            if (escActive)
+            {
+                escActive = false;
+            }
         }
     }
     public void ResumeGame()
@@ -154,5 +162,45 @@ public class PauseMenu : MonoBehaviour {
         onPause = false;
         Time.timeScale = 1;
         pauseCanvas.gameObject.SetActive(false);
+    }
+    public void OnMouseOverResume()
+    {
+        if (indice != 0)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 0;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverRestart()
+    {
+        if (indice != 1)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 1;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverMainMenu()
+    {
+        if (indice != 2)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 2;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverExitGame()
+    {
+        if (indice != 3)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 3;
+            imageList[indice].gameObject.SetActive(true);
+        }
     }
 }

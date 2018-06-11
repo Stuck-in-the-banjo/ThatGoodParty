@@ -97,6 +97,26 @@ public class MainMenu : MonoBehaviour
             {
                 onHold = true;
             }
-        
+    }
+
+    public void OnMouseOverContinue()
+    {
+        if (indice != 0)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 0;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverExitGame()
+    {
+        if (indice != 1)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 1;
+            imageList[indice].gameObject.SetActive(true);
+        }
     }
 }
