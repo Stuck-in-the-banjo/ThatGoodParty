@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.PostProcessing;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -96,7 +96,19 @@ public class Player : MonoBehaviour
     public float fourthTripShader = 0.0f;
     private bool tripOffDrugs = false;
 
-    //public 
+    // Post processing
+    public PostProcessingProfile profilePP;
+    private ChromaticAberrationModel.Settings chromaticSettings;
+    private bool tripOffDrugsChromatic = false;
+    private float chromaticFadeCount = 0.0f;
+    [Range(0.0f, 1.0f)]
+    public float firstTripChromatic = 0.0f;
+    [Range(0.0f, 1.0f)]
+    public float secondTripChromatic = 0.0f;
+    [Range(0.0f, 1.0f)]
+    public float thirdTripChromatic = 0.0f;
+    [Range(0.0f, 1.0f)]
+    public float fourthTripChromatic = 0.0f;
 
     // Collider
     private bool offDrugsReached = false;
@@ -125,23 +137,35 @@ public class Player : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
+        //Shader and PP
         //Set trip shader to 0
         tripShader.SetFloat("_Magnitude", 0.0f);
+        //PostProcessing
+        chromaticSettings = profilePP.chromaticAberration.settings;
+        chromaticSettings.intensity = 0;
+        profilePP.chromaticAberration.settings = chromaticSettings;
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleInput();
-       
-        //Set trip shader to 0
-        if(tripOffDrugs == false && shaderFadeCount != 0.0f)
+
+        //Shader and PP
+        if (tripOffDrugs == false && shaderFadeCount != 0.0f)
         {
             OffTripShader();
+            
         }
+        if(tripOffDrugsChromatic == false && chromaticFadeCount != 0.0f)
+        {
+            OffTripChromaticPP();
+        }
+
         if (player_context == PLAYER_CONTEXT.ON_DRUGS)
         {
-            
+            //Shader and PP
+            SetTripChromaticPP();
             if (transform.position.y <= 4.0f)
             {
                 waving = true;               
@@ -171,7 +195,9 @@ public class Player : MonoBehaviour
             
             if (offDrugsReached == true) //Timer (trip_timer >= trips[player_trips])
             {
+                //Shader and PP
                 tripOffDrugs = false;
+                tripOffDrugsChromatic = false;
                 player_context = PLAYER_CONTEXT.OFF_DRUGS;
                 rave_music.Play();
                 rave_music.volume = 0.0f;
@@ -185,6 +211,7 @@ public class Player : MonoBehaviour
 
         if (player_context == PLAYER_CONTEXT.START_DRUGS)
         {
+            //Shader and PP
             SetTripShader();
             current_impulse = Mathf.Abs(Mathf.Cos(impulse_variation)) * max_impulse * 0.75f;
             impulse_variation += impulse_increment;
@@ -604,6 +631,7 @@ public class Player : MonoBehaviour
 
     void SetTripShader()
     {
+        //Shaders
         tripOffDrugs = true;
         if (trips[player_trips] == first_trip)
         {
@@ -636,7 +664,50 @@ public class Player : MonoBehaviour
                 shaderFadeCount += 0.0001f;
                 tripShader.SetFloat("_Magnitude", shaderFadeCount);
             }
-        }  
+        }
+        
+    }
+    void SetTripChromaticPP()
+    {
+        //Post processing
+        tripOffDrugsChromatic = true;
+        if (trips[player_trips] == first_trip)
+        {
+            if (chromaticFadeCount < firstTripChromatic)
+            {
+                chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+        }
+        else if (trips[player_trips] == second_trip)
+        {
+            if (chromaticFadeCount < secondTripChromatic)
+            {
+                chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+        }
+        else if (trips[player_trips] == third_trip)
+        {
+            if (chromaticFadeCount < thirdTripChromatic)
+            {
+                chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+        }
+        else if (trips[player_trips] == fourth_trip)
+        {
+            if (chromaticFadeCount < fourthTripChromatic)
+            {
+                /*chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;*/
+                chromaticSettings.intensity =  Mathf.PingPong(Time.time, 2);
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+        }
     }
     void OffTripShader()
     {
@@ -651,4 +722,20 @@ public class Player : MonoBehaviour
             tripOffDrugs = true;
         }   
     }
-}
+    void OffTripChromaticPP()
+    {
+        if (chromaticFadeCount > 0.0f)
+        {
+            chromaticFadeCount -= 0.0005f;
+            chromaticSettings.intensity = chromaticFadeCount;
+            
+            profilePP.chromaticAberration.settings = chromaticSettings;
+        }
+        else
+        {
+            chromaticSettings.intensity = 0.0f;
+            profilePP.chromaticAberration.settings = chromaticSettings;
+            tripOffDrugsChromatic = true;
+        }
+    }
+    }

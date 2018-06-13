@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &33607990
 Transform:
   m_ObjectHideFlags: 0
@@ -13880,7 +13880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &795407256
 Transform:
   m_ObjectHideFlags: 0
@@ -30990,7 +30990,7 @@ MonoBehaviour:
   max_acceleration: 0.5
   max_deceleration: 0.5
   stars_roads:
-  - {fileID: 33607989}
+  - {fileID: 795407255}
   - {fileID: 425872746}
   - {fileID: 979555917}
   - {fileID: 33607989}
@@ -31018,6 +31018,11 @@ MonoBehaviour:
   secondTripShader: 0.004
   thirdTripShader: 0.006
   fourthTripShader: 0.008
+  profilePP: {fileID: 11400000, guid: b4e5d7b40c4a70c49a825f9744a8e1aa, type: 2}
+  firstTripChromatic: 0.4
+  secondTripChromatic: 0.6
+  thirdTripChromatic: 0.8
+  fourthTripChromatic: 1
 --- !u!95 &1756246349
 Animator:
   serializedVersion: 3
