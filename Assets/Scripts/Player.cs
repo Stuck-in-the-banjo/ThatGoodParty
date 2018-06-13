@@ -95,6 +95,10 @@ public class Player : MonoBehaviour
     public float fourthTripShader = 0.0f;
     private bool tripOffDrugs = false;
 
+
+    // Collider
+    private bool offDrugsReached = false;
+    
     //Dsiplay Logic
     bool flipped = false;
 
@@ -162,15 +166,17 @@ public class Player : MonoBehaviour
             }
 
             //Trip Timing
-            if (trip_timer >= trips[player_trips])
+            
+            if (offDrugsReached == true) //Timer (trip_timer >= trips[player_trips])
             {
                 tripOffDrugs = false;
                 player_context = PLAYER_CONTEXT.OFF_DRUGS;
                 rave_music.Play();
                 rave_music.volume = 0.0f;
-                trip_timer = 0.0f;
+                offDrugsReached = false;
+                //trip_timer = 0.0f;
             }
-            else trip_timer += Time.deltaTime;
+            //else trip_timer += Time.deltaTime;
 
             Debug.Log(waving);
         }
@@ -206,7 +212,6 @@ public class Player : MonoBehaviour
 
         if(player_context == PLAYER_CONTEXT.OFF_DRUGS)
         {
-
             anim.SetBool("falling", true);
             float distance_to_floor = transform.position.y;
 
@@ -451,6 +456,7 @@ public class Player : MonoBehaviour
 
     public void StartDrug()
     {
+        offDrugsReached = false;
         acceleration = max_acceleration * 0.5f;
         deceleration = max_deceleration * 0.33f;
         player_context = PLAYER_CONTEXT.START_DRUGS;
@@ -552,6 +558,10 @@ public class Player : MonoBehaviour
                 }
             }
 
+        }
+        if (other.CompareTag("endTrip"))
+        {
+            offDrugsReached = true;
         }
 
     }
