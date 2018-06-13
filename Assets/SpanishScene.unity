@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &33607990
 Transform:
   m_ObjectHideFlags: 0
@@ -9422,6 +9422,7 @@ GameObject:
   - component: {fileID: 543524535}
   - component: {fileID: 543524536}
   - component: {fileID: 543524537}
+  - component: {fileID: 543524538}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9532,6 +9533,18 @@ MonoBehaviour:
   BlurMaterial: {fileID: 2100000, guid: f1cf38398e2592d419f5fa91ad6af6de, type: 2}
   iterations: 4
   downResolution: 3
+--- !u!114 &543524538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543524530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: b4e5d7b40c4a70c49a825f9744a8e1aa, type: 2}
 --- !u!1 &544265765
 GameObject:
   m_ObjectHideFlags: 0
@@ -13867,7 +13880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &795407256
 Transform:
   m_ObjectHideFlags: 0
@@ -31081,7 +31094,7 @@ MonoBehaviour:
   max_acceleration: 0.5
   max_deceleration: 0.5
   stars_roads:
-  - {fileID: 795407255}
+  - {fileID: 33607989}
   - {fileID: 425872746}
   - {fileID: 979555917}
   - {fileID: 33607989}

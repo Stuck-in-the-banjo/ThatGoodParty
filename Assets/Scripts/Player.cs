@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour
     public float fourthTripShader = 0.0f;
     private bool tripOffDrugs = false;
 
+    //public 
 
     // Collider
     private bool offDrugsReached = false;
