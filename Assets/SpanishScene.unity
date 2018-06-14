@@ -31017,7 +31017,7 @@ MonoBehaviour:
   firstTripShader: 0.002
   secondTripShader: 0.004
   thirdTripShader: 0.006
-  fourthTripShader: 0.008
+  fourthTripShader: 0.006
   profilePP: {fileID: 11400000, guid: b4e5d7b40c4a70c49a825f9744a8e1aa, type: 2}
   firstTripChromatic: 0.4
   secondTripChromatic: 0.6
