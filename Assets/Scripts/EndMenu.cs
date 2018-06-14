@@ -125,7 +125,7 @@ public class EndMenu : MonoBehaviour
         }
 
         // Make action
-        if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
             clickSound.Play();
             if (buttonList[indice] == startGame)

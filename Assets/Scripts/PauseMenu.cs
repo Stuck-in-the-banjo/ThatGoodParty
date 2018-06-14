@@ -21,6 +21,8 @@ public class PauseMenu : MonoBehaviour {
     public Button exitGame;
     public Image exitImg;
 
+    public GameObject xboxUI;
+    public GameObject pcUI;
     public GameObject camera;
 
     private List<Button> buttonList;
@@ -53,6 +55,8 @@ public class PauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        SwapUI();
+
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7"))
         {
             audioSource.Play();
@@ -90,7 +94,7 @@ public class PauseMenu : MonoBehaviour {
                 }
             }
                 // Up
-                if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
+                if ((Input.GetAxis("Vertical") > 0.0f || Input.GetKeyDown(KeyCode.UpArrow)) && onHold == true)
             {
                 clickSound.Play();
                 if (indice == 0)
@@ -109,7 +113,7 @@ public class PauseMenu : MonoBehaviour {
                 }
             }
             // Down
-            else if (Input.GetAxis("Vertical") < 0.0f && onHold == true)
+            else if ((Input.GetAxis("Vertical") < 0.0f || Input.GetKeyDown(KeyCode.DownArrow)) && onHold == true)
             {
                 clickSound.Play();
                 if (indice == (imageList.Count-1))
@@ -128,7 +132,7 @@ public class PauseMenu : MonoBehaviour {
                 }
             }
             // Make action
-            if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
                 onPause = false;
                 clickSound.Play();
@@ -173,6 +177,7 @@ public class PauseMenu : MonoBehaviour {
     {
         if (indice != 0)
         {
+            SetPCUI();
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 0;
@@ -183,6 +188,7 @@ public class PauseMenu : MonoBehaviour {
     {
         if (indice != 1)
         {
+            SetPCUI();
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 1;
@@ -193,6 +199,7 @@ public class PauseMenu : MonoBehaviour {
     {
         if (indice != 2)
         {
+            SetPCUI();
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 2;
@@ -203,10 +210,59 @@ public class PauseMenu : MonoBehaviour {
     {
         if (indice != 3)
         {
+            SetPCUI();
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 3;
             imageList[indice].gameObject.SetActive(true);
         }
+    }
+    public void SwapUI()
+    {
+        if(Input.anyKeyDown)
+        {
+            SetPCUI();
+        }
+        else
+        {
+            SetXboxUI();
+        }
+    }
+    private bool SetPCUI()
+    {
+        xboxUI.SetActive(false);
+        pcUI.SetActive(true);
+        return true;
+    }
+    private bool SetXboxUI()
+    {
+        if (Input.GetKey(KeyCode.Joystick1Button0) ||
+           Input.GetKey(KeyCode.Joystick1Button1) ||
+           Input.GetKey(KeyCode.Joystick1Button2) ||
+           Input.GetKey(KeyCode.Joystick1Button3) ||
+           Input.GetKey(KeyCode.Joystick1Button4) ||
+           Input.GetKey(KeyCode.Joystick1Button5) ||
+           Input.GetKey(KeyCode.Joystick1Button6) ||
+           Input.GetKey(KeyCode.Joystick1Button7) ||
+           Input.GetKey(KeyCode.Joystick1Button8) ||
+           Input.GetKey(KeyCode.Joystick1Button9) ||
+           Input.GetKey(KeyCode.Joystick1Button10) ||
+           Input.GetKey(KeyCode.Joystick1Button11) ||
+           Input.GetKey(KeyCode.Joystick1Button12) ||
+           Input.GetKey(KeyCode.Joystick1Button13) ||
+           Input.GetKey(KeyCode.Joystick1Button14) ||
+           Input.GetKey(KeyCode.Joystick1Button15) ||
+           Input.GetKey(KeyCode.Joystick1Button16) ||
+           Input.GetKey(KeyCode.Joystick1Button17) ||
+           Input.GetKey(KeyCode.Joystick1Button18) ||
+           Input.GetKey(KeyCode.Joystick1Button19) ||
+           Input.GetAxis("Vertical") != 0.0f ||
+           Input.GetAxis("Horizontal") != 0.0f)
+        {
+            pcUI.SetActive(false);
+            xboxUI.SetActive(true);
+            return true;
+        }
+        return false;
     }
 }
