@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
         FIFTH_STATE,
         FINISH_STATE
     }
-
     public enum PLAYER_CONTEXT
     {
         FREE = 0,
@@ -74,7 +73,8 @@ public class Player : MonoBehaviour
     Dictionary<PLAYER_STATE, float> trips;
 
     //Audio
-    public AudioSource pick_star_audio;
+    public AudioSource[] pick_star_fx;
+    private int pick_star_count = 0;
     public AudioSource first_trip_music;
     public AudioSource trip_music;
 
@@ -565,7 +565,7 @@ public class Player : MonoBehaviour
         if(other.CompareTag("Collectable"))
         {
             //Collectable music
-            pick_star_audio.Play();
+            PickSound().Play();
 
             //Impulse player when picks up a star
             impulsed = true;
@@ -759,5 +759,18 @@ public class Player : MonoBehaviour
             profilePP.bloom.settings = bloomSettings;
             tripOffDrugsChromatic = true;
         }
+    }
+
+    private AudioSource PickSound()
+    {
+        if (pick_star_count >= pick_star_fx.Length-1)
+        {
+            pick_star_count = 0;
+        }
+        else
+        {
+            pick_star_count++;
+        }
+        return pick_star_fx[pick_star_count];
     }
     }
