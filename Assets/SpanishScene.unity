@@ -4850,7 +4850,7 @@ Transform:
   m_GameObject: {fileID: 298323543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 36
@@ -5723,7 +5723,7 @@ Transform:
   m_GameObject: {fileID: 347515311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 33
@@ -7444,7 +7444,7 @@ Transform:
   m_GameObject: {fileID: 438280192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 31
@@ -14550,7 +14550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &795407256
 Transform:
   m_ObjectHideFlags: 0
@@ -21835,7 +21835,7 @@ Transform:
   m_GameObject: {fileID: 1188198580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 35
@@ -24333,7 +24333,7 @@ Transform:
   m_GameObject: {fileID: 1334248105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 34
@@ -26005,7 +26005,7 @@ Transform:
   m_GameObject: {fileID: 1421368759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 89.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1216765880}
   m_RootOrder: 32
@@ -32790,6 +32790,7 @@ MonoBehaviour:
   secondTripChromatic: 0.6
   thirdTripChromatic: 0.8
   fourthTripChromatic: 1
+  bloomIntensity: 0.5
 --- !u!95 &1756246349
 Animator:
   serializedVersion: 3

@@ -111,6 +111,7 @@ public class Player : MonoBehaviour
     public float thirdTripChromatic = 0.0f;
     [Range(0.0f, 1.0f)]
     public float fourthTripChromatic = 0.0f;
+    public float bloomIntensity = 0.5f;
 
     // Collider
     private bool offDrugsReached = false;
@@ -717,7 +718,7 @@ public class Player : MonoBehaviour
             }
         }
         // Bloom
-        if (bloomSettings.bloom.softKnee < 0.3f)
+        if (bloomSettings.bloom.softKnee < bloomIntensity)
         {
             bloomSettings.bloom.softKnee += 0.001f;
             profilePP.bloom.settings = bloomSettings;
@@ -741,7 +742,7 @@ public class Player : MonoBehaviour
         // Bloom
         if (bloomSettings.bloom.softKnee > 0.0f)
         {
-            bloomSettings.bloom.softKnee -= 0.0005f;
+            bloomSettings.bloom.softKnee -= 0.001f;
             profilePP.bloom.settings = bloomSettings;
         }
         // Chromatic Aberration
