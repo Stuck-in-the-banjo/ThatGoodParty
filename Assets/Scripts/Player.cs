@@ -74,7 +74,8 @@ public class Player : MonoBehaviour
 
     //Audio
     public AudioSource[] pick_star_fx;
-    private int pick_star_count = 0;
+    private int improveRandomPls = 0;
+    //private int pick_star_count = 0;
     public AudioSource first_trip_music;
     public AudioSource trip_music;
 
@@ -763,14 +764,25 @@ public class Player : MonoBehaviour
 
     private AudioSource PickSound()
     {
-        if (pick_star_count >= pick_star_fx.Length-1)
+        /*if (pick_star_count >= pick_star_fx.Length-1)
         {
             pick_star_count = 0;
         }
         else
         {
             pick_star_count++;
+        }*/
+        if (pick_star_fx[0] != null)
+        {
+            int random = Random.Range(0, pick_star_fx.Length - 1);
+            while (improveRandomPls == random)
+            {
+                random = Random.Range(0, pick_star_fx.Length - 1);
+            }
+            
+            return pick_star_fx[random];
         }
-        return pick_star_fx[pick_star_count];
+        else
+            return null;
     }
     }
