@@ -775,11 +775,11 @@ public class Player : MonoBehaviour
         if (pick_star_fx[0] != null)
         {
             int random = Random.Range(0, pick_star_fx.Length - 1);
-            while (improveRandomPls == random)
+            while (random == improveRandomPls)
             {
                 random = Random.Range(0, pick_star_fx.Length - 1);
             }
-            
+            improveRandomPls = random;
             return pick_star_fx[random];
         }
         else
