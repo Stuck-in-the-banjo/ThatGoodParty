@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.Audio;
 
 public class DialogueManager : MonoBehaviour {
 
     public Text nameText;
     public Text dialogueText;
+    public TextMeshProUGUI namepro;
+    public TextMeshProUGUI dialoguePro;
+    
+    /*private TextMeshPro nameTextPro;
+    private TextMeshPro dialogueTextPro;*/
 
     public GameObject dialogue_ui;
 
@@ -39,6 +45,8 @@ public class DialogueManager : MonoBehaviour {
         sentences = new Queue<string>();
         dialogue_ui.SetActive(false);
 
+        /*nameTextPro = GetComponent<TextMeshPro>() ?? gameObject.AddComponent<TextMeshPro>();
+        dialogueTextPro = GetComponent<TextMeshPro>() ?? gameObject.AddComponent<TextMeshPro>();*/
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -52,6 +60,7 @@ public class DialogueManager : MonoBehaviour {
 
         dialogue_ui.SetActive(true);
         nameText.text = dialogue.NPC_name;
+        namepro.text = dialogue.NPC_name;
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -94,6 +103,8 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         dialogueText.transform.position = new Vector3(dialogueText.transform.position.x, posision, dialogueText.transform.position.z);
 
+        dialoguePro.text = "";
+        //dialoguePro.transform.position = new Vector3(dialoguePro.transform.position.x, posision, dialoguePro.transform.position.z);
         int tmp = 0;
 
         foreach (char letter in sentence.ToCharArray())
@@ -104,6 +115,7 @@ public class DialogueManager : MonoBehaviour {
                 yield return null;
             }
             dialogueText.text += letter;
+            dialoguePro.text += letter;
             timeCounter = 0.0f;
             if(letter != ' ')
             {
