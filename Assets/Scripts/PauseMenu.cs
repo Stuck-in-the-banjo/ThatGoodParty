@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour {
     public AudioSource clickSound;
     public Canvas pauseCanvas;
 
+    public GameObject dialogueCanvas;
+    private bool dialogueWasActive = false;
     // Pause Buttons
     public Button resume;
     public Image resumeImg;
@@ -62,6 +64,10 @@ public class PauseMenu : MonoBehaviour {
             audioSource.Play();
             if (pauseCanvas.isActiveAndEnabled)
             {
+                if(dialogueWasActive)
+                {
+                    dialogueCanvas.SetActive(true);
+                }
                 camera.GetComponent<BlurShader>().enabled = false;
                 onPause = false;
                 Time.timeScale = 1;
@@ -69,6 +75,15 @@ public class PauseMenu : MonoBehaviour {
             }
             else
             {
+                //Check if dialogue was active
+                if (dialogueCanvas.activeInHierarchy)
+                {
+                    dialogueWasActive = true;
+                    dialogueCanvas.SetActive(false);
+                }
+                else
+                    dialogueWasActive = false;
+
                 camera.GetComponent<BlurShader>().enabled = true;
                 Time.timeScale = 0;
                 pauseCanvas.gameObject.SetActive(true);
