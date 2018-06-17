@@ -468,13 +468,13 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.E))
                 {
                     //Pass text faster
                     dialogue_manager.FasterLetters();
                 }
 
-                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(KeyCode.E))
                 {
                     //Pass text faster
                     dialogue_manager.SlowLetters();
