@@ -8,6 +8,7 @@ TagManager:
   - Collectable
   - DialogueLoad
   - endTrip
+  - cloudCollider
   layers:
   - Default
   - TransparentFX

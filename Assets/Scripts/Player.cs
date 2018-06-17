@@ -541,7 +541,7 @@ public class Player : MonoBehaviour
             star.gameObject.SetActive(false);
         }
 
-        if (player_trips == PLAYER_STATE.FIFTH_STATE)
+        if (player_trips == PLAYER_STATE.FOURTH_STATE)
         {
             anim.SetBool("flying", false);
             anim.SetBool("die", true);
@@ -598,6 +598,17 @@ public class Player : MonoBehaviour
         if (other.CompareTag("endTrip"))
         {
             offDrugsReached = true;
+        }
+
+        if (other.CompareTag("cloudCollider"))
+        {
+            if (player_trips == PLAYER_STATE.FOURTH_STATE)
+            {
+                anim.SetBool("flying", false);
+                anim.SetBool("die", true);
+                player_context = PLAYER_CONTEXT.DEAD;
+                return;
+            }
         }
 
     }
