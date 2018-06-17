@@ -38,6 +38,9 @@ public class MainMenu : MonoBehaviour
 
         indice = 0;
         imageList[indice].gameObject.SetActive(true);
+
+        //Tutorial control information
+        usingControllerIsActive.SetActive(false);
     }
 
     // Update is called once per frame
@@ -113,7 +116,7 @@ public class MainMenu : MonoBehaviour
     public void OnMouseOverContinue()
     {
         if (indice != 0)
-        {
+        {            
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 0;

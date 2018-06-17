@@ -814,7 +814,6 @@ public class Player : MonoBehaviour
 
     private void Tutorial()
     {
-        
         if (UsingControllerIsActive.activeInHierarchy && moveDone == false)
         {
             moveDone = true;
@@ -866,6 +865,7 @@ public class Player : MonoBehaviour
     }
     private void SetPCUI()
     {
+        UsingControllerIsActive.SetActive(false);
         if (moveDone != true)
         {
             if (movePC.activeInHierarchy == false)
@@ -885,6 +885,7 @@ public class Player : MonoBehaviour
     }
     private void SetXboxUI()
     {
+        UsingControllerIsActive.SetActive(true);
         /*if (moveDone != true)
         {
             if (movePC.activeInHierarchy == false)
