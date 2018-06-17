@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
 {
     public AudioSource clickSound;
 
+    //Info to main scene
+    public GameObject usingControllerIsActive;
+
     // Buttons
     public Button startGame;
     public Image startImg;
@@ -40,9 +43,10 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // Menu navigation
-            // Up
-            if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
+        // Up
+        if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
             {
                 clickSound.Play();
                 if (indice == 0)
@@ -82,7 +86,14 @@ public class MainMenu : MonoBehaviour
             // Make action
             if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
-                clickSound.Play();
+
+            if(Input.GetKeyDown(KeyCode.JoystickButton0))
+            {
+                usingControllerIsActive.SetActive(true);
+            }
+            else
+                usingControllerIsActive.SetActive(false);
+            clickSound.Play();
                 if (buttonList[indice] == startGame)
                 {
                     Time.timeScale = 1;

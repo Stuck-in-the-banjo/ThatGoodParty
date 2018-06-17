@@ -897,6 +897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 819702131}
+  usingControllerIsActive: {fileID: 1138371983987816, guid: ca639c601c1f6e54eb3f02f344f6a38a,
+    type: 2}
   startGame: {fileID: 1502418418}
   startImg: {fileID: 1053836203}
   exitGame: {fileID: 223281411}

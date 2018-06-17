@@ -25,6 +25,14 @@ public class Player : MonoBehaviour
         TALKING,
         DEAD
     }
+    //Tutorial
+    public GameObject tutorialCanvas;
+    public GameObject movePC;
+    public GameObject interactPC;
+    public GameObject interactController;
+    private bool moveDone = false;
+    private bool interactDone = false;
+    public GameObject UsingControllerIsActive;
 
     //Move variables
     public float max_speed;
@@ -150,13 +158,19 @@ public class Player : MonoBehaviour
         bloomSettings = profilePP.bloom.settings;
         bloomSettings.bloom.softKnee = 0;
         profilePP.bloom.settings = bloomSettings;
+
+        //Tutorial
+        if (UsingControllerIsActive.activeSelf)
+        {
+            movePC.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleInput();
-
+        Tutorial();
         //Shader and PP
         if (tripOffDrugs == false && shaderFadeCount != 0.0f)
         {
@@ -383,7 +397,7 @@ public class Player : MonoBehaviour
         {
             case PLAYER_CONTEXT.FREE:
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
                 {
                     if (able_to_talk)
                     {
@@ -415,7 +429,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -430,13 +444,13 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
                 {
                     //Pass text faster
                     dialogue_manager.FasterLetters();
                 }
 
-                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
                 {
                     //Pass text faster
                     dialogue_manager.SlowLetters();
@@ -485,8 +499,8 @@ public class Player : MonoBehaviour
             player_context = PLAYER_CONTEXT.ON_DRUGS;
         }*/
 
-        if (Input.GetKeyDown(KeyCode.E))
-            player_context = PLAYER_CONTEXT.FREE;
+        /*if (Input.GetKeyDown(KeyCode.E))
+            player_context = PLAYER_CONTEXT.FREE;*/
 
         if (Input.GetKeyDown(KeyCode.P))
             StartDrug();
@@ -797,4 +811,101 @@ public class Player : MonoBehaviour
         else
             return null;
     }
+
+    private void Tutorial()
+    {
+        
+        if (UsingControllerIsActive.activeInHierarchy && moveDone == false)
+        {
+            moveDone = true;
+            SetXboxUI();
+        }
+        if (moveDone == false && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) ||
+            Input.GetAxis("Horizontal") != 0.0f))
+        {
+            moveDone = true;
+            UpdateTutorial();
+        }
+        else if(player_context == PLAYER_CONTEXT.TALKING)
+        {
+            interactDone = true;
+            tutorialCanvas.SetActive(false);
+        }
     }
+    private void UpdateTutorial()
+    {
+        if (Input.anyKeyDown)
+        {
+            SetPCUI();
+        }
+        else if (Input.GetKey(KeyCode.Joystick1Button0) ||
+           Input.GetKey(KeyCode.Joystick1Button1) ||
+           Input.GetKey(KeyCode.Joystick1Button2) ||
+           Input.GetKey(KeyCode.Joystick1Button3) ||
+           Input.GetKey(KeyCode.Joystick1Button4) ||
+           Input.GetKey(KeyCode.Joystick1Button5) ||
+           Input.GetKey(KeyCode.Joystick1Button6) ||
+           Input.GetKey(KeyCode.Joystick1Button7) ||
+           Input.GetKey(KeyCode.Joystick1Button8) ||
+           Input.GetKey(KeyCode.Joystick1Button9) ||
+           Input.GetKey(KeyCode.Joystick1Button10) ||
+           Input.GetKey(KeyCode.Joystick1Button11) ||
+           Input.GetKey(KeyCode.Joystick1Button12) ||
+           Input.GetKey(KeyCode.Joystick1Button13) ||
+           Input.GetKey(KeyCode.Joystick1Button14) ||
+           Input.GetKey(KeyCode.Joystick1Button15) ||
+           Input.GetKey(KeyCode.Joystick1Button16) ||
+           Input.GetKey(KeyCode.Joystick1Button17) ||
+           Input.GetKey(KeyCode.Joystick1Button18) ||
+           Input.GetKey(KeyCode.Joystick1Button19) ||
+           Input.GetAxis("Vertical") != 0.0f ||
+           Input.GetAxis("Horizontal") != 0.0f)
+        {
+            SetXboxUI();
+        }
+    }
+    private void SetPCUI()
+    {
+        if (moveDone != true)
+        {
+            if (movePC.activeInHierarchy == false)
+            {
+                DisableTutorialUI();
+                movePC.SetActive(true);
+            }      
+        }
+        else if (interactDone != true)
+        {
+            if(interactPC.activeInHierarchy == false)
+            {
+                DisableTutorialUI();
+                interactPC.SetActive(true);
+            }
+        }  
+    }
+    private void SetXboxUI()
+    {
+        /*if (moveDone != true)
+        {
+            if (movePC.activeInHierarchy == false)
+            {
+                DisableTutorialUI();
+                movePC.SetActive(true);
+            }
+        }*/
+        if (interactDone != true)
+        {
+            if(interactController.activeInHierarchy == false)
+            {
+                DisableTutorialUI();
+                interactController.SetActive(true);
+            }
+        }
+    }
+    private void DisableTutorialUI()
+    {
+        movePC.SetActive(false);
+        interactPC.SetActive(false);
+        interactController.SetActive(false);
+    }
+}
