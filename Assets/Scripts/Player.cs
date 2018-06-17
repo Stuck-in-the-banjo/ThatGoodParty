@@ -33,6 +33,10 @@ public class Player : MonoBehaviour
     private bool moveDone = false;
     private bool interactDone = false;
     public GameObject UsingControllerIsActive;
+    private bool alreadyShownJump = false;
+
+    public GameObject jumpController;
+    public GameObject jumpPC;
 
     //Move variables
     public float max_speed;
@@ -233,6 +237,18 @@ public class Player : MonoBehaviour
 
         if (player_context == PLAYER_CONTEXT.START_DRUGS)
         {
+            //Tutorial jump
+            if(alreadyShownJump == false)
+            {
+                if (UsingControllerIsActive.activeSelf)
+                {
+                    jumpController.SetActive(true);
+                }
+                else
+                    jumpPC.SetActive(true);
+                alreadyShownJump = true;
+            }
+
             //Shader and PP
             SetTripShader();
             SetTripChromaticPP();
@@ -268,6 +284,14 @@ public class Player : MonoBehaviour
 
         if(player_context == PLAYER_CONTEXT.OFF_DRUGS)
         {
+            //Tutorial jump
+            if (UsingControllerIsActive.activeSelf)
+            {
+                jumpController.SetActive(false);
+            }
+            else
+                jumpPC.SetActive(false);
+
             anim.SetBool("falling", true);
             float distance_to_floor = transform.position.y;
 
