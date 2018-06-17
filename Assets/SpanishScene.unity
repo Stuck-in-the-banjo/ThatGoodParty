@@ -36325,7 +36325,7 @@ MonoBehaviour:
   max_acceleration: 0.5
   max_deceleration: 0.5
   stars_roads:
-  - {fileID: 33607989}
+  - {fileID: 795407255}
   - {fileID: 425872746}
   - {fileID: 979555917}
   - {fileID: 33607989}

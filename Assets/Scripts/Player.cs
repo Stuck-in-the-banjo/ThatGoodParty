@@ -401,7 +401,7 @@ public class Player : MonoBehaviour
                 if (player_context != PLAYER_CONTEXT.ON_DRUGS)
                     return;
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Space))
                 {
                     if (!impulsed)
                     {
