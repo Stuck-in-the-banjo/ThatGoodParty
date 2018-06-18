@@ -779,7 +779,7 @@ public class Player : MonoBehaviour
             }
             if(magicNumber > 0)
             {
-                magicNumber -= 0.002f;
+                magicNumber -= 0.0005f;
             }
             //chromaticSettings.intensity = chromaticFadeCount;
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 1 + magicNumber);
@@ -790,7 +790,7 @@ public class Player : MonoBehaviour
         {
             if (magicNumber > 0)
             {
-                magicNumber -= 0.002f;
+                magicNumber -= 0.0005f;
             }
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 2 + magicNumber);
             profilePP.chromaticAberration.settings = chromaticSettings;
