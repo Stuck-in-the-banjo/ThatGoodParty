@@ -310,7 +310,7 @@ public class Player : MonoBehaviour
                 distance_to_floor /= distance_to_slow;
 
                 //Music
-                if (player_trips != PLAYER_STATE.FIFTH_STATE)
+                if (player_trips != PLAYER_STATE.FOURTH_STATE)
                 {
 
 
