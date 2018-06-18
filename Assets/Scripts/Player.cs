@@ -136,6 +136,7 @@ public class Player : MonoBehaviour
 
     //Debug
     float lolol = 0.0f;
+    public float floor = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -296,7 +297,7 @@ public class Player : MonoBehaviour
                 jumpPC.SetActive(false);
 
             anim.SetBool("falling", true);
-            float distance_to_floor = transform.position.y;
+            float distance_to_floor = transform.position.y - floor;
 
             if (distance_to_floor < distance_to_slow)
             {
@@ -573,15 +574,17 @@ public class Player : MonoBehaviour
         gravity = initial_gravity;
         player_context = PLAYER_CONTEXT.FREE;
 
-        chromaticSettings.intensity = 0.0f;
-        profilePP.chromaticAberration.settings = chromaticSettings;
-        bloomSettings.bloom.softKnee = 0.0f;
-        profilePP.bloom.settings = bloomSettings;
-        tripOffDrugsChromatic = true;
-
+        if (player_trips != PLAYER_STATE.FOURTH_STATE)
+        {
+            chromaticSettings.intensity = 0.0f;
+            profilePP.chromaticAberration.settings = chromaticSettings;
+            bloomSettings.bloom.softKnee = 0.0f;
+            profilePP.bloom.settings = bloomSettings;
+            tripOffDrugsChromatic = true;
+        }
         stars_roads[(int)player_trips].SetActive(false);
 
-        transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, floor, transform.position.z);
 
         Transform[] childs = stars_roads[(int)player_trips].GetComponentsInChildren<Transform>(true);
         foreach (Transform star in childs)

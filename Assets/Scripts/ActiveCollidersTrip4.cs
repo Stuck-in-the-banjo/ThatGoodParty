@@ -14,7 +14,7 @@ public class ActiveCollidersTrip4 : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        cloudColliders.SetActive(true);
+        player.GetComponent<Player>().floor = 110.0f;
         player.GetComponent<SpriteRenderer>().sortingOrder = 12;
     }
 }
