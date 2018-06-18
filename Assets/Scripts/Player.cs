@@ -572,6 +572,12 @@ public class Player : MonoBehaviour
         gravity = initial_gravity;
         player_context = PLAYER_CONTEXT.FREE;
 
+        chromaticSettings.intensity = 0.0f;
+        profilePP.chromaticAberration.settings = chromaticSettings;
+        bloomSettings.bloom.softKnee = 0.0f;
+        profilePP.bloom.settings = bloomSettings;
+        tripOffDrugsChromatic = true;
+
         stars_roads[(int)player_trips].SetActive(false);
 
         transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
@@ -773,7 +779,7 @@ public class Player : MonoBehaviour
             }
             if(magicNumber > 0)
             {
-                magicNumber -= 0.005f;
+                magicNumber -= 0.002f;
             }
             //chromaticSettings.intensity = chromaticFadeCount;
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 1 + magicNumber);
@@ -784,7 +790,7 @@ public class Player : MonoBehaviour
         {
             if (magicNumber > 0)
             {
-                magicNumber -= 0.005f;
+                magicNumber -= 0.002f;
             }
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 2 + magicNumber);
             profilePP.chromaticAberration.settings = chromaticSettings;
