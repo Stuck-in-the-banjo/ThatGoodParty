@@ -124,6 +124,9 @@ public class Player : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float fourthTripChromatic = 0.0f;
     public float bloomIntensity = 0.5f;
+    private float magicNumber = 0.0f;
+    private bool booleanBugFixer = false;
+    private bool booleanBugFixer2 = false;
 
     // Collider
     private bool offDrugsReached = false;
@@ -604,6 +607,11 @@ public class Player : MonoBehaviour
 
         if(other.CompareTag("Collectable"))
         {
+            // PP chromatic aberration
+            chromaticFadeCount += 0.3f;
+            chromaticSettings.intensity = chromaticFadeCount;
+            profilePP.chromaticAberration.settings = chromaticSettings;
+            magicNumber += 0.05f;
             //Collectable music
             PickSound().Play();
 
@@ -735,12 +743,24 @@ public class Player : MonoBehaviour
                 chromaticSettings.intensity = chromaticFadeCount;
                 profilePP.chromaticAberration.settings = chromaticSettings;
             }
+            else if(chromaticFadeCount > (firstTripChromatic + 0.0005f))
+            {
+                chromaticFadeCount -= 0.005f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
         }
         else if (trips[player_trips] == second_trip)
         {
             if (chromaticFadeCount < secondTripChromatic)
             {
                 chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+            else if (chromaticFadeCount > (secondTripChromatic + 0.0005f))
+            {
+                chromaticFadeCount -= 0.005f;
                 chromaticSettings.intensity = chromaticFadeCount;
                 profilePP.chromaticAberration.settings = chromaticSettings;
             }
@@ -751,20 +771,23 @@ public class Player : MonoBehaviour
             {
                 chromaticFadeCount += 0.001f;
             }
+            if(magicNumber > 0)
+            {
+                magicNumber -= 0.005f;
+            }
             //chromaticSettings.intensity = chromaticFadeCount;
-            chromaticSettings.intensity = Mathf.PingPong(Time.time, 1);
+            chromaticSettings.intensity = Mathf.PingPong(Time.time, 1 + magicNumber);
             profilePP.chromaticAberration.settings = chromaticSettings;
             
         }
         else if (trips[player_trips] == fourth_trip)
         {
-            if (chromaticFadeCount < fourthTripChromatic)
+            if (magicNumber > 0)
             {
-                /*chromaticFadeCount += 0.001f;
-                chromaticSettings.intensity = chromaticFadeCount;*/
-                chromaticSettings.intensity =  Mathf.PingPong(Time.time, 2);
-                profilePP.chromaticAberration.settings = chromaticSettings;
+                magicNumber -= 0.005f;
             }
+            chromaticSettings.intensity = Mathf.PingPong(Time.time, 2 + magicNumber);
+            profilePP.chromaticAberration.settings = chromaticSettings;
         }
         // Bloom
         if (bloomSettings.bloom.softKnee < bloomIntensity)
@@ -795,6 +818,24 @@ public class Player : MonoBehaviour
             profilePP.bloom.settings = bloomSettings;
         }
         // Chromatic Aberration
+        magicNumber = 0.0f;
+
+        if (trips[player_trips] == third_trip && booleanBugFixer == false)
+        {
+            chromaticFadeCount = 1.0f;
+            chromaticSettings.intensity = chromaticFadeCount;
+
+            profilePP.chromaticAberration.settings = chromaticSettings;
+            booleanBugFixer = true;
+        }
+        if (trips[player_trips] == fourth_trip && booleanBugFixer2 == false)
+        {
+            chromaticFadeCount = 1.5f;
+            chromaticSettings.intensity = chromaticFadeCount;
+
+            profilePP.chromaticAberration.settings = chromaticSettings;
+            booleanBugFixer2 = true;
+        }
         if (chromaticFadeCount > 0.0f)
         {
             chromaticFadeCount -= 0.0005f;
