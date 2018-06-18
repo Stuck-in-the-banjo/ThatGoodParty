@@ -625,11 +625,14 @@ public class Player : MonoBehaviour
             //Collectable music
             PickSound().Play();
 
+
             //Impulse player when picks up a star
-            impulsed = true;
-            impulse_variation = 0.0f;
-            anim.SetBool("swimming", true);
-            
+            if(player_context == PLAYER_CONTEXT.ON_DRUGS)
+            {
+                impulsed = true;
+                impulse_variation = 0.0f;
+                anim.SetBool("swimming", true);
+            }
 
             other.gameObject.SetActive(false);
         }
