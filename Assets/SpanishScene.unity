@@ -36540,6 +36540,11 @@ Prefab:
       propertyPath: player_state
       value: 
       objectReference: {fileID: 1756246348}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].display_time
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca8776c258c045d40a4f4f04363371dc, type: 2}
   m_IsPrefabParent: 0

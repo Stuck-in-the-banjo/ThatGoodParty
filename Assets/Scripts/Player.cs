@@ -474,7 +474,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E) || Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -632,10 +632,17 @@ public class Player : MonoBehaviour
         if(other.CompareTag("Collectable"))
         {
             // PP chromatic aberration
-            chromaticFadeCount += 0.3f;
-            chromaticSettings.intensity = chromaticFadeCount;
-            profilePP.chromaticAberration.settings = chromaticSettings;
+            if(trips[player_trips] == second_trip || trips[player_trips] == first_trip)
+            {
+                chromaticFadeCount += 0.3f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
             magicNumber = 0.05f;
+            if(trips[player_trips] == third_trip)
+            {
+                magicNumber = 0.01f;
+            }
             //Collectable music
             PickSound().Play();
 
@@ -794,15 +801,10 @@ public class Player : MonoBehaviour
         }
         else if (trips[player_trips] == third_trip)
         {
-            if (chromaticFadeCount < thirdTripChromatic)
-            {
-                chromaticFadeCount += 0.001f;
-            }
-            if(magicNumber > 0)
+            if (magicNumber > 0)
             {
                 magicNumber -= 0.0005f;
             }
-            //chromaticSettings.intensity = chromaticFadeCount;
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 1 + magicNumber);
             profilePP.chromaticAberration.settings = chromaticSettings;
         }
