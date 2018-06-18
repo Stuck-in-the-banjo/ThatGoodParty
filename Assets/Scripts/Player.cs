@@ -328,7 +328,7 @@ public class Player : MonoBehaviour
             }
             else distance_to_floor = 1.0f;
 
-            transform.Translate(0.0f, -(gravity * Time.deltaTime * distance_to_floor), 0.0f);
+            transform.Translate(0.0f, (current_impulse * Time.deltaTime) - (gravity * Time.deltaTime * distance_to_floor), 0.0f);
 
             gravity = (gravity + (Time.deltaTime * slow_factor));
             gravity = Mathf.Clamp(gravity, 0.0f, max_gravity);
