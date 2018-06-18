@@ -474,7 +474,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -489,13 +489,13 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return))
                 {
                     //Pass text faster
                     dialogue_manager.FasterLetters();
                 }
 
-                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(KeyCode.E))
+                if (Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
                 {
                     //Pass text faster
                     dialogue_manager.SlowLetters();
@@ -805,7 +805,6 @@ public class Player : MonoBehaviour
             //chromaticSettings.intensity = chromaticFadeCount;
             chromaticSettings.intensity = Mathf.PingPong(Time.time, 1 + magicNumber);
             profilePP.chromaticAberration.settings = chromaticSettings;
-            
         }
         else if (trips[player_trips] == fourth_trip)
         {
