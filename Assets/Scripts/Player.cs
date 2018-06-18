@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     public GameObject jumpController;
     public GameObject jumpPC;
 
+    public GameObject enjoyController;
+    public GameObject enjoyPC;
+
     //Move variables
     public float max_speed;
     public float max_acceleration;
@@ -130,7 +133,10 @@ public class Player : MonoBehaviour
 
     // Collider
     private bool offDrugsReached = false;
-    
+
+    //Get high
+    public bool drugPicked = false;
+
     //Dsiplay Logic
     bool flipped = false;
 
@@ -194,7 +200,6 @@ public class Player : MonoBehaviour
             //Shader and PP
             SetTripChromaticPP();
             // --------------------------------------
-
             if (transform.position.y <= 4.0f)
             {
                 waving = true;               
@@ -436,6 +441,17 @@ public class Player : MonoBehaviour
                         Debug.Log("Start talking");
                     }
                 }
+                else if(drugPicked == true && (Input.GetKey(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.Q)))
+                {
+                    //Disable enjoy tutorial
+                    drugPicked = false;
+                    enjoyController.SetActive(false);
+                    enjoyPC.SetActive(false);
+                    //Drug effects
+                    pick_star_fx[0].Play();
+                    anim.SetBool("Idle", true);
+                    StartDrug();
+                }
 
                 break;
 
@@ -487,8 +503,6 @@ public class Player : MonoBehaviour
 
                 break;
         }
-
-
 
         if (impulsed == true)
         {
@@ -621,7 +635,7 @@ public class Player : MonoBehaviour
             chromaticFadeCount += 0.3f;
             chromaticSettings.intensity = chromaticFadeCount;
             profilePP.chromaticAberration.settings = chromaticSettings;
-            magicNumber += 0.05f;
+            magicNumber = 0.05f;
             //Collectable music
             PickSound().Play();
 

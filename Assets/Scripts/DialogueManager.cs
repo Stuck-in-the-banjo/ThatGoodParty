@@ -141,7 +141,14 @@ public class DialogueManager : MonoBehaviour {
 
         if(drug_finish)
         {
-            player_script.StartDrug();
+            player_script.drugPicked = true;
+            if(player_script.UsingControllerIsActive.activeSelf)
+            {
+                player_script.enjoyController.SetActive(true);
+            }
+            else
+                player_script.enjoyPC.SetActive(true);
+            //player_script.StartDrug();
         }
     }
 
