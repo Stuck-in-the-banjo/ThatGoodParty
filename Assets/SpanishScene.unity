@@ -13831,8 +13831,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560219095}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -8.950001, y: -6.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.950001, y: -8.1, z: 0}
+  m_LocalScale: {x: 1, y: 3.3000011, z: 1}
   m_Children: []
   m_Father: {fileID: 1281241467}
   m_RootOrder: 4
@@ -18465,7 +18465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222.433, y: -234.132}
+  m_AnchoredPosition: {x: -222.433, y: -235.42}
   m_SizeDelta: {x: 0.6, y: 0.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745196449
@@ -18487,7 +18487,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b6fb84585c05dba4885eb54d7751cf7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7707cd110c1a79c40b2a130e6ef41f2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38064,8 +38064,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541784827}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -2.95, y: -6.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.95, y: -8.1, z: 0}
+  m_LocalScale: {x: 1, y: 3.3000011, z: 1}
   m_Children: []
   m_Father: {fileID: 1281241467}
   m_RootOrder: 5
@@ -38824,7 +38824,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1756246358}
-        m_MethodName: SwapControlsCanvas
+        m_MethodName: SwapToControlsCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42885,7 +42885,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1756246358}
-        m_MethodName: SwapControlsCanvas
+        m_MethodName: SwapToControlsCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48588,8 +48588,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1896648846}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 3.05, y: -6.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.05, y: -8.1, z: 0}
+  m_LocalScale: {x: 1, y: 3.3000011, z: 1}
   m_Children: []
   m_Father: {fileID: 1281241467}
   m_RootOrder: 6
@@ -52306,8 +52306,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079600609}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 8.95, y: -6.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.95, y: -8.1, z: 0}
+  m_LocalScale: {x: 1, y: 3.3000011, z: 1}
   m_Children: []
   m_Father: {fileID: 1281241467}
   m_RootOrder: 7
