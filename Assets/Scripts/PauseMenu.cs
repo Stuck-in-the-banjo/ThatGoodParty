@@ -9,19 +9,24 @@ public class PauseMenu : MonoBehaviour {
 
     public AudioSource audioSource;
     public AudioSource clickSound;
-    public Canvas pauseCanvas;
+    public GameObject pauseCanvas;
 
     public GameObject dialogueCanvas;
+    public GameObject controlsCanvasPC;
+    public GameObject controlsCanvasController;
     private bool dialogueWasActive = false;
     // Pause Buttons
     public Button resume;
     public Image resumeImg;
+    public Button controls;
+    public Image controlsImg;
     public Button restart;
     public Image restartImg;
     public Button mainMenu;
     public Image mainmenuImg;
     public Button exitGame;
     public Image exitImg;
+    public Image controlsActiveImage;
 
     public GameObject xboxUI;
     public GameObject pcUI;
@@ -36,6 +41,7 @@ public class PauseMenu : MonoBehaviour {
     private bool onPause = false;
     // Bug fixing with Esc key
     private bool escActive = false;
+    public bool xboxControllerActive = false;
 
 	void Start ()
     {
@@ -43,11 +49,13 @@ public class PauseMenu : MonoBehaviour {
         imageList = new List<Image>();
 
         buttonList.Add(resume);
+        buttonList.Add(controls);
         buttonList.Add(restart);
         buttonList.Add(mainMenu);
         buttonList.Add(exitGame);
 
         imageList.Add(resumeImg);
+        imageList.Add(controlsImg);
         imageList.Add(restartImg);
         imageList.Add(mainmenuImg);
         imageList.Add(exitImg);
@@ -59,15 +67,17 @@ public class PauseMenu : MonoBehaviour {
     {
         SwapUI();
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7"))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 7") || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             audioSource.Play();
-            if (pauseCanvas.isActiveAndEnabled)
+            if (pauseCanvas.activeInHierarchy)
             {
                 if(dialogueWasActive)
                 {
                     dialogueCanvas.SetActive(true);
                 }
+                controlsCanvasPC.SetActive(false);
+                controlsCanvasController.SetActive(false);
                 camera.GetComponent<BlurShader>().enabled = false;
                 onPause = false;
                 Time.timeScale = 1;
@@ -84,6 +94,8 @@ public class PauseMenu : MonoBehaviour {
                 else
                     dialogueWasActive = false;
 
+                controlsCanvasPC.SetActive(false);
+                controlsCanvasController.SetActive(false);
                 camera.GetComponent<BlurShader>().enabled = true;
                 Time.timeScale = 0;
                 pauseCanvas.gameObject.SetActive(true);
@@ -97,25 +109,16 @@ public class PauseMenu : MonoBehaviour {
         // Menu navigation
         if(onPause)
         {
-            if ((Input.GetKeyDown(KeyCode.Escape) && escActive == false) || Input.GetKeyDown("joystick button 1"))
+            if (controlsCanvasPC.activeInHierarchy == false && controlsCanvasController.activeInHierarchy == false)
             {
-                camera.GetComponent<BlurShader>().enabled = false;
-                audioSource.Play();
-                if (pauseCanvas.isActiveAndEnabled)
-                {
-                    onPause = false;
-                    Time.timeScale = 1;
-                    pauseCanvas.gameObject.SetActive(false);
-                }
-            }
                 // Up
                 if ((Input.GetAxis("Vertical") > 0.0f || Input.GetKeyDown(KeyCode.UpArrow)) && onHold == true)
-            {
+                {
                 clickSound.Play();
                 if (indice == 0)
                 {
                     imageList[indice].gameObject.SetActive(false);
-                    indice = (imageList.Count-1);
+                    indice = (imageList.Count - 1);
                     imageList[indice].gameObject.SetActive(true);
                     onHold = false;
                 }
@@ -126,47 +129,62 @@ public class PauseMenu : MonoBehaviour {
                     imageList[indice].gameObject.SetActive(true);
                     onHold = false;
                 }
-            }
-            // Down
+                }
+                // Down
             else if ((Input.GetAxis("Vertical") < 0.0f || Input.GetKeyDown(KeyCode.DownArrow)) && onHold == true)
             {
                 clickSound.Play();
-                if (indice == (imageList.Count-1))
+                if (indice == (imageList.Count - 1))
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice = 0;
                     imageList[indice].gameObject.SetActive(true);
                     onHold = false;
                 }
-                else
+            else
                 {
                     imageList[indice].gameObject.SetActive(false);
                     indice++;
-                    imageList[indice].gameObject.SetActive(true);
-                    onHold = false;
+                imageList[indice].gameObject.SetActive(true);
+                       onHold = false;
                 }
+            }
             }
             // Make action
             if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
-                onPause = false;
-                clickSound.Play();
-                if (buttonList[indice] == resume)
+                if (pauseCanvas.activeInHierarchy == false)
                 {
-                    ResumeGame();
+                    SwapToControlsCanvas();
                 }
-                else if(buttonList[indice] == restart)
+                else
                 {
-                    SceneManager.LoadScene("SpanishScene");
-                }
-                else if(buttonList[indice] == mainMenu)
-                {
-                    Time.timeScale = 1;
-                    SceneManager.LoadScene("MainMenu");
-                }
-                else if(buttonList[indice] == exitGame)
-                {
-                    Application.Quit();
+                    clickSound.Play();
+                    if (buttonList[indice] == resume)
+                    {
+                        onPause = false;
+                        ResumeGame();
+                    }
+                    else if (buttonList[indice] == restart)
+                    {
+                        onPause = false;
+                        SceneManager.LoadScene("SpanishScene");
+                    }
+                    else if (buttonList[indice] == mainMenu)
+                    {
+                        onPause = false;
+                        Time.timeScale = 1;
+                        SceneManager.LoadScene("MainMenu");
+                    }
+                    else if (buttonList[indice] == exitGame)
+                    {
+                        onPause = false;
+                        Application.Quit();
+                    }
+                    else if (buttonList[indice] == controls)
+                    {
+                        SwapToControlsCanvas();
+                    }
                 }
             }
             if (Input.GetAxis("Vertical") == 0)
@@ -199,7 +217,7 @@ public class PauseMenu : MonoBehaviour {
             imageList[indice].gameObject.SetActive(true);
         }
     }
-    public void OnMouseOverRestart()
+    public void OnMouseOverControls()
     {
         if (indice != 1)
         {
@@ -210,7 +228,7 @@ public class PauseMenu : MonoBehaviour {
             imageList[indice].gameObject.SetActive(true);
         }
     }
-    public void OnMouseOverMainMenu()
+    public void OnMouseOverRestart()
     {
         if (indice != 2)
         {
@@ -221,7 +239,7 @@ public class PauseMenu : MonoBehaviour {
             imageList[indice].gameObject.SetActive(true);
         }
     }
-    public void OnMouseOverExitGame()
+    public void OnMouseOverMainMenu()
     {
         if (indice != 3)
         {
@@ -232,11 +250,27 @@ public class PauseMenu : MonoBehaviour {
             imageList[indice].gameObject.SetActive(true);
         }
     }
-    public void SwapUI()
+    public void OnMouseOverExitGame()
     {
-        if(Input.anyKeyDown)
+        if (indice != 4)
         {
             SetPCUI();
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 4;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverControlsAccept()
+    {
+        clickSound.Play();
+        controlsActiveImage.gameObject.SetActive(true);
+    }
+    public void SwapUI()
+    {
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            SetPCControlsController();
         }
         else
         {
@@ -248,6 +282,11 @@ public class PauseMenu : MonoBehaviour {
         xboxUI.SetActive(false);
         pcUI.SetActive(true);
         return true;
+    }
+    private void SetPCControlsController()
+    {
+        xboxControllerActive = false;
+        SwapControlControllerOrPC();
     }
     private bool SetXboxUI()
     {
@@ -274,10 +313,55 @@ public class PauseMenu : MonoBehaviour {
            Input.GetAxis("Vertical") != 0.0f ||
            Input.GetAxis("Horizontal") != 0.0f)
         {
+            xboxControllerActive = true;
             pcUI.SetActive(false);
             xboxUI.SetActive(true);
+            SwapControlControllerOrPC();
             return true;
         }
         return false;
+    }
+
+    public void SwapToControlsCanvas()
+    {
+        if (controlsCanvasPC.activeInHierarchy || controlsCanvasController.activeInHierarchy)
+        {
+            clickSound.Play();
+            controlsCanvasController.SetActive(false);
+            controlsCanvasPC.SetActive(false);
+
+            pauseCanvas.gameObject.SetActive(true);
+        }
+        else
+        {
+            if (xboxControllerActive)
+            {
+                controlsCanvasController.SetActive(true);
+                controlsCanvasPC.SetActive(false);
+            }
+            else
+            {
+                controlsCanvasPC.SetActive(true);
+                controlsCanvasController.SetActive(false);
+            }
+            SwapControlControllerOrPC();
+            pauseCanvas.gameObject.SetActive(false);
+        }
+            
+    }
+    private void SwapControlControllerOrPC()
+    {
+        if (controlsCanvasController.activeInHierarchy == true && controlsCanvasPC.activeInHierarchy == false && xboxControllerActive == false)
+        {
+            controlsCanvasController.SetActive(false);
+            controlsCanvasPC.SetActive(true);
+            
+        }
+        else if (controlsCanvasPC.activeInHierarchy == true && controlsCanvasController.activeInHierarchy == false && xboxControllerActive == true)
+        {
+            controlsCanvasPC.SetActive(false);
+            controlsCanvasController.SetActive(true);
+        }
+        
     }
 }
