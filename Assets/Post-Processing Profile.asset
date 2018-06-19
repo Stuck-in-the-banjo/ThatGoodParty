@@ -293,14 +293,14 @@ MonoBehaviour:
       size: 1.74
       luminanceContribution: 0.676
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0.90365124, g: 1, b: 0.30147058, a: 1}
+      color: {r: 0.95537525, g: 1, b: 0.6764706, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.299
-      smoothness: 1
-      roundness: 0.783
+      intensity: 0
+      smoothness: 0.898
+      roundness: 0.2
       mask: {fileID: 0}
       opacity: 1
       rounded: 0

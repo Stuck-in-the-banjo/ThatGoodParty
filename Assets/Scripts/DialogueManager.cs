@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour {
 
         if(drug_finish)
         {
-            player_script.pick_star_fx[1].Play();
+            player_script.takeDrugFX.Play();
             player_script.drugPicked = true;
             if(player_script.UsingControllerIsActive.activeSelf)
             {

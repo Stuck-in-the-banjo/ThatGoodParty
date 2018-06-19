@@ -116,6 +116,7 @@ public class Player : MonoBehaviour
     public PostProcessingProfile profilePP;
     private ChromaticAberrationModel.Settings chromaticSettings;
     private BloomModel.Settings bloomSettings;
+    private VignetteModel.Settings vignetteSettings;
     private bool tripOffDrugsChromatic = false;
     private float chromaticFadeCount = 0.0f;
     [Range(0.0f, 1.0f)]
@@ -127,6 +128,7 @@ public class Player : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float fourthTripChromatic = 0.0f;
     public float bloomIntensity = 0.5f;
+    public float vignetteIntensity = 0.65f;
     private float magicNumber = 0.0f;
     private bool booleanBugFixer = false;
     private bool booleanBugFixer2 = false;
@@ -143,7 +145,7 @@ public class Player : MonoBehaviour
     //Debug
     float lolol = 0.0f;
     public float floor = 0.0f;
-
+    public AudioSource takeDrugFX;
     // Use this for initialization
     void Start()
     {
@@ -172,7 +174,9 @@ public class Player : MonoBehaviour
         bloomSettings = profilePP.bloom.settings;
         bloomSettings.bloom.softKnee = 0;
         profilePP.bloom.settings = bloomSettings;
-
+        vignetteSettings = profilePP.vignette.settings;
+        vignetteSettings.intensity = 0.0f;
+        profilePP.vignette.settings = vignetteSettings;
         //Tutorial
         if (UsingControllerIsActive.activeSelf)
         {
@@ -636,6 +640,11 @@ public class Player : MonoBehaviour
             // PP chromatic aberration
             if(player_context != PLAYER_CONTEXT.OFF_DRUGS)
             {
+                if (vignetteSettings.intensity != vignetteIntensity && player_context == PLAYER_CONTEXT.ON_DRUGS)
+                {
+                    vignetteSettings.intensity = vignetteIntensity;
+                    profilePP.vignette.settings = vignetteSettings;
+                }
                 if (trips[player_trips] == second_trip || trips[player_trips] == first_trip)
                 {
                     chromaticFadeCount += 0.3f;
@@ -658,7 +667,7 @@ public class Player : MonoBehaviour
                         profilePP.chromaticAberration.settings = chromaticSettings;
 
                     }
-                    magicNumber = 0.2f;
+                    magicNumber = 0.5f;
                 }
             }
             else
@@ -846,12 +855,12 @@ public class Player : MonoBehaviour
             }
             else if(magicNumber > 0)
             {
-                magicNumber -= 0.0005f;
-                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.5f + magicNumber);
+                magicNumber -= 0.005f;
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.3f) + magicNumber;
             }
             else if(magicNumber < 0)
             {
-                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.5f);
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.3f);
             }
 
             profilePP.chromaticAberration.settings = chromaticSettings;
@@ -867,7 +876,7 @@ public class Player : MonoBehaviour
             else if (magicNumber > 0)
             {
                 magicNumber -= 0.0005f;
-                chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.0f + magicNumber);
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.0f)+magicNumber;
             }
             else if (magicNumber < 0)
             {
@@ -903,6 +912,21 @@ public class Player : MonoBehaviour
             bloomSettings.bloom.softKnee -= 0.001f;
             profilePP.bloom.settings = bloomSettings;
         }
+        //Vignette
+        if (vignetteSettings.intensity <= 0.0f)
+        {
+            vignetteSettings.intensity = 0.0f;
+            profilePP.vignette.settings = vignetteSettings;
+        }
+        else
+        {
+            vignetteSettings.intensity -= 0.001f;
+            if(vignetteSettings.intensity > 0.0001f)
+            {
+                profilePP.vignette.settings = vignetteSettings;
+            }    
+        }
+        
         // Chromatic Aberration
         magicNumber = 0.0f;
 
@@ -931,10 +955,13 @@ public class Player : MonoBehaviour
         }
         else
         {
+            //Set every PP to 0
             chromaticSettings.intensity = 0.0f;
             profilePP.chromaticAberration.settings = chromaticSettings;
             bloomSettings.bloom.softKnee = 0.0f;
             profilePP.bloom.settings = bloomSettings;
+            vignetteSettings.intensity = 0.0f;
+            profilePP.vignette.settings = vignetteSettings;
             tripOffDrugsChromatic = true;
         }
     }
