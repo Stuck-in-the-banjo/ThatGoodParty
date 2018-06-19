@@ -634,31 +634,40 @@ public class Player : MonoBehaviour
         if(other.CompareTag("Collectable"))
         {
             // PP chromatic aberration
-            if(trips[player_trips] == second_trip || trips[player_trips] == first_trip)
+            if(player_context != PLAYER_CONTEXT.OFF_DRUGS)
             {
-                chromaticFadeCount += 0.3f;
-                chromaticSettings.intensity = chromaticFadeCount;
-                profilePP.chromaticAberration.settings = chromaticSettings;
-            }
-            magicNumber = 0.05f;
-            if(trips[player_trips] == third_trip || trips[player_trips] == fourth_trip)
-            {
-                if (chromaticFadeCount < thirdTripChromatic && trips[player_trips] == third_trip)
-                {
-                    chromaticFadeCount += 0.5f;
-                    chromaticSettings.intensity = chromaticFadeCount;
-                    profilePP.chromaticAberration.settings = chromaticSettings;
-                }
-                else if (chromaticFadeCount < fourthTripChromatic && trips[player_trips] == fourth_trip)
+                if (trips[player_trips] == second_trip || trips[player_trips] == first_trip)
                 {
                     chromaticFadeCount += 0.3f;
                     chromaticSettings.intensity = chromaticFadeCount;
                     profilePP.chromaticAberration.settings = chromaticSettings;
-
                 }
-                magicNumber = 0.2f;
+                magicNumber = 0.05f;
+                if (trips[player_trips] == third_trip || trips[player_trips] == fourth_trip)
+                {
+                    if (chromaticFadeCount < thirdTripChromatic && trips[player_trips] == third_trip)
+                    {
+                        chromaticFadeCount += 0.5f;
+                        chromaticSettings.intensity = chromaticFadeCount;
+                        profilePP.chromaticAberration.settings = chromaticSettings;
+                    }
+                    else if (chromaticFadeCount < fourthTripChromatic && trips[player_trips] == fourth_trip)
+                    {
+                        chromaticFadeCount += 0.3f;
+                        chromaticSettings.intensity = chromaticFadeCount;
+                        profilePP.chromaticAberration.settings = chromaticSettings;
 
+                    }
+                    magicNumber = 0.2f;
+                }
             }
+            else
+            {
+                chromaticFadeCount += 0.05f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+            
             //Collectable music
             PickSound().Play();
 
