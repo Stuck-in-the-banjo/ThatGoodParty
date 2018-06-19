@@ -662,7 +662,7 @@ public class Player : MonoBehaviour
                     }
                     else if (chromaticFadeCount < fourthTripChromatic && trips[player_trips] == fourth_trip)
                     {
-                        chromaticFadeCount += 0.3f;
+                        chromaticFadeCount += 0.5f;
                         chromaticSettings.intensity = chromaticFadeCount;
                         profilePP.chromaticAberration.settings = chromaticSettings;
 
@@ -875,7 +875,7 @@ public class Player : MonoBehaviour
             }
             else if (magicNumber > 0)
             {
-                magicNumber -= 0.0005f;
+                magicNumber -= 0.005f;
                 chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.0f)+magicNumber;
             }
             else if (magicNumber < 0)
