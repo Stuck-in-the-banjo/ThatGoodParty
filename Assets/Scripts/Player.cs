@@ -645,7 +645,7 @@ public class Player : MonoBehaviour
             {
                 if (chromaticFadeCount < thirdTripChromatic && trips[player_trips] == third_trip)
                 {
-                    chromaticFadeCount += 0.3f;
+                    chromaticFadeCount += 0.5f;
                     chromaticSettings.intensity = chromaticFadeCount;
                     profilePP.chromaticAberration.settings = chromaticSettings;
                 }
@@ -654,9 +654,10 @@ public class Player : MonoBehaviour
                     chromaticFadeCount += 0.3f;
                     chromaticSettings.intensity = chromaticFadeCount;
                     profilePP.chromaticAberration.settings = chromaticSettings;
+
                 }
-                magicNumber = 0.05f;
-                
+                magicNumber = 0.2f;
+
             }
             //Collectable music
             PickSound().Play();
@@ -816,15 +817,32 @@ public class Player : MonoBehaviour
         }
         else if (trips[player_trips] == third_trip)
         {
+            /*if (chromaticFadeCount < thirdTripChromatic)
+            {
+                chromaticFadeCount += 0.001f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }
+            else if (chromaticFadeCount > (thirdTripChromatic + 0.0005f))
+            {
+                chromaticFadeCount -= 0.005f;
+                chromaticSettings.intensity = chromaticFadeCount;
+                profilePP.chromaticAberration.settings = chromaticSettings;
+            }*/
             if (chromaticFadeCount < thirdTripChromatic)
             {
                 chromaticFadeCount += 0.005f;
                 chromaticSettings.intensity = chromaticFadeCount;
                 profilePP.chromaticAberration.settings = chromaticSettings;
             }
-            else
+            else if(magicNumber > 0)
             {
-                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.7f);
+                magicNumber -= 0.0005f;
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.5f + magicNumber);
+            }
+            else if(magicNumber < 0)
+            {
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 1.5f);
             }
 
             profilePP.chromaticAberration.settings = chromaticSettings;
@@ -837,9 +855,14 @@ public class Player : MonoBehaviour
                 chromaticSettings.intensity = chromaticFadeCount;
                 profilePP.chromaticAberration.settings = chromaticSettings;
             }
-            else
+            else if (magicNumber > 0)
             {
-                chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.2f);
+                magicNumber -= 0.0005f;
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.0f + magicNumber);
+            }
+            else if (magicNumber < 0)
+            {
+                chromaticSettings.intensity = Mathf.PingPong(Time.time, 2.0f);
             }
             profilePP.chromaticAberration.settings = chromaticSettings;
         }
