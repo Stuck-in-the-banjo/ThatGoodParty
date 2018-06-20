@@ -111,6 +111,7 @@ public class MainMenu : MonoBehaviour
                 }
                 else if (buttonList[indice] == language)
                 {
+                    onLanguageMenu = true;
                     languageGo.SetActive(true);
                 }
                 else if (buttonList[indice] == exitGame)
