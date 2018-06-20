@@ -4573,8 +4573,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: "Entre dos individuos la armon\xEDa nunca viene dada, sino que debe conquistarse
-        indefinidamente."
+      value: Estamos todos llenos de dudas, estamos todos creando en la oscuridad.
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4711,7 +4710,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[2].sentences.Array.data[0]
-      value: "La verdad es una y el error, m\xFAltiple."
+      value: "No conf\xEDes en nadie."
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -22784,7 +22783,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -22945,12 +22944,12 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
-      value: "Vas m\xE1s doblado que el pico de una mesa"
+      value: "Vas m\xE1s doblado que el pico de una mesa."
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: "S\xED, s\xED. Es maravilloso. \r\n\r\n\xBFQui\xE9n necesita esposa teniendo
+      value: "S\xED, s\xED. Es la hostia. \r\n\r\n\xBFQui\xE9n necesita esposa teniendo
         esto? \r"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
@@ -22972,8 +22971,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
-      value: "\xBFQu\xE9?\xBFQue quieres m\xE1s? \nPero si he visto lo que te ha dado
-        Goofy. "
+      value: "P\xEDrate y d\xE9jame con mis cosas."
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -24233,7 +24231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &979555918
 Transform:
   m_ObjectHideFlags: 0
@@ -26351,7 +26349,9 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
-      value: "No, tron. No pasa nada. \nPero control, tron, control... "
+      value: 'No, tron. No hay excusas.
+
+        Pero control, tron, control... '
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -40919,7 +40919,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
-      value: "\xBFQuieres m\xE1s? Bueno... lo siento pero no me queda m\xE1s.\r\n"
+      value: "\xBFQuieres m\xE1s? Lo siento pero no me queda m\xE1s.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -42397,7 +42397,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
-      value: "Vale, vale, no pasa nada. Pero \xE1ndate con ojo...\n"
+      value: "Vale, vale, tranqui. Pero \xE1ndate con ojo...\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
