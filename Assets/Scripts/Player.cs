@@ -146,6 +146,9 @@ public class Player : MonoBehaviour
     float lolol = 0.0f;
     public float floor = 0.0f;
     public AudioSource takeDrugFX;
+
+    bool lolaso = false;
+
     // Use this for initialization
     void Start()
     {
@@ -245,7 +248,7 @@ public class Player : MonoBehaviour
             }
             //else trip_timer += Time.deltaTime;
 
-            Debug.Log(waving);
+            //Debug.Log(waving);
         }
 
         if (player_context == PLAYER_CONTEXT.START_DRUGS)
@@ -333,7 +336,7 @@ public class Player : MonoBehaviour
                     }
                 }
 
-                Debug.Log(distance_to_floor);
+                //Debug.Log(distance_to_floor);
             }
             else distance_to_floor = 1.0f;
 
@@ -386,24 +389,43 @@ public class Player : MonoBehaviour
             return;
 
         //Horizontal Axis
-        current_speed += Input.GetAxis("Horizontal") * acceleration;
+        float axis = Input.GetAxis("Horizontal");
+
+        if(UsingControllerIsActive.activeInHierarchy == false)
+        {
+            axis = Input.GetAxisRaw("Horizontal");
+        }
+
+        
+        current_speed += axis * acceleration;
         current_speed = Mathf.Clamp(current_speed, -max_speed, max_speed);
+
+        Debug.Log(axis);
 
         if(IsInsideMap())
             transform.Translate(current_speed * Time.deltaTime, 0.0f, 0.0f);
         
-
-        if (Input.GetAxis("Horizontal") == 0.0f)
+        if (axis == 0.0f)
         {
             if (current_speed < 0.0f)
             {
-                current_speed += deceleration;
+                if (UsingControllerIsActive.activeInHierarchy)
+                    current_speed += deceleration;
+                else current_speed += deceleration;
+
+                Debug.Log("Frenando");
+
                 current_speed = Mathf.Clamp(current_speed, -max_speed, 0.0f);
             }
 
             if (current_speed > 0.0f)
             {
-                current_speed -= deceleration;
+                if (UsingControllerIsActive.activeInHierarchy)
+                    current_speed -= deceleration;
+                else current_speed -= deceleration;
+
+                Debug.Log("Frenando");
+
                 current_speed = Mathf.Clamp(current_speed, 0.0f, max_speed);
             }
 
@@ -419,11 +441,11 @@ public class Player : MonoBehaviour
         {
             gravity = (-Input.GetAxis("Vertical") * max_gravity);
             gravity = Mathf.Clamp(gravity, initial_gravity, max_gravity);
-            Debug.Log(gravity);
+            //Debug.Log(gravity);
         }
 
         //Display
-        FlipSprite(Input.GetAxis("Horizontal"));
+        FlipSprite(axis);
 
     }
 
@@ -442,7 +464,7 @@ public class Player : MonoBehaviour
                         anim.SetBool("Idle", true);
                         npc_to_talk.TriggerDialogue();
                         npc_to_talk.talked = true;
-                        Debug.Log("Start talking");
+                        //Debug.Log("Start talking");
                     }
                 }
                 else if(drugPicked == true && (Input.GetKey(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.Q)))
@@ -529,7 +551,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("swimming", false);
             }
 
-            Debug.Log("To the sky" + current_impulse);
+            //Debug.Log("To the sky" + current_impulse);
 
         }
 
