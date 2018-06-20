@@ -10,6 +10,11 @@ public class ButtonManager : MonoBehaviour {
         Time.timeScale = 1;
         SceneManager.LoadScene("SpanishScene");
     }
+    public void NewGameBtnEN(string newGameLevel)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("SpanishSceneEN");
+    }
 
     public void ExitgameBtn()
     {
