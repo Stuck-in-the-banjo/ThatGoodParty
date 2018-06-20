@@ -441,7 +441,7 @@ public class Player : MonoBehaviour
                         player_context = PLAYER_CONTEXT.TALKING;
                         anim.SetBool("Idle", true);
                         npc_to_talk.TriggerDialogue();
-
+                        npc_to_talk.talked = true;
                         Debug.Log("Start talking");
                     }
                 }
@@ -451,6 +451,14 @@ public class Player : MonoBehaviour
                     drugPicked = false;
                     enjoyController.SetActive(false);
                     enjoyPC.SetActive(false);
+
+                    //Reset npc
+                    NPC[] npcs = FindObjectsOfType<NPC>();
+                    foreach(NPC npc in npcs)
+                    {
+                        npc.talked = false;
+                    }
+
                     //Drug effects
                     pick_star_fx[0].Play();
                     anim.SetBool("Idle", true);
@@ -692,7 +700,7 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if(other.CompareTag("NPC") && (int)player_trips == other.GetComponent<NPC>().turn_to_talk)
+        if(other.CompareTag("NPC"))
         {
             able_to_talk = true;
             npc_to_talk = other.GetComponent<NPC>();

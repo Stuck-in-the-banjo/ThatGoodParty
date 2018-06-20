@@ -17,14 +17,17 @@ public class NPC : MonoBehaviour {
 
     public void TriggerDialogue()
     {
+        if(!talked)
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogues[(int)player_state.player_trips]);
+        else FindObjectOfType<DialogueManager>().StartDialogue(secondRound[(int)player_state.player_trips]); 
 
-        if(turn_to_talk == (int)player_state.player_trips && talked == false)
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogues[0]);
-            talked = true;
-        }
-        else
-            FindObjectOfType<DialogueManager>().StartDialogue(secondRound[0]);
+        /* if(turn_to_talk == (int)player_state.player_trips && talked == false)
+         {
+             FindObjectOfType<DialogueManager>().StartDialogue(dialogues[0]);
+             talked = true;
+         }
+         else
+             FindObjectOfType<DialogueManager>().StartDialogue(secondRound[0]);*/
 
     }
 }
