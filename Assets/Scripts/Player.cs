@@ -460,6 +460,7 @@ public class Player : MonoBehaviour
                 {
                     if (able_to_talk)
                     {
+                        current_speed = 0.0f;
                         player_context = PLAYER_CONTEXT.TALKING;
                         anim.SetBool("Idle", true);
                         npc_to_talk.TriggerDialogue();
