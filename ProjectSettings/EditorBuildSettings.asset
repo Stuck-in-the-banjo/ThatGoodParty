@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TheEnd.unity
     guid: d4ed9d230ec27494fb56086087cd4301
+  - enabled: 1
+    path: Assets/MainMenuEN.unity
+    guid: c4fcae02c11059b4e86cd1b818ed8ba3

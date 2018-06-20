@@ -15,15 +15,19 @@ public class MainMenu : MonoBehaviour
     // Buttons
     public Button startGame;
     public Image startImg;
+    public Button language;
+    public Image languageImg;
     public Button exitGame;
     public Image exitImg;
 
     private List<Button> buttonList;
     private List<Image> imageList;
 
+    public GameObject languageGo;
     private int indice = 0;
     private bool onHold = false;
 
+    private bool onLanguageMenu = false;
     // Use this for initialization
     void Start()
     {
@@ -31,9 +35,11 @@ public class MainMenu : MonoBehaviour
         imageList = new List<Image>();
 
         buttonList.Add(startGame);
+        buttonList.Add(language);
         buttonList.Add(exitGame);
 
         imageList.Add(startImg);
+        imageList.Add(languageImg);
         imageList.Add(exitImg);
 
         indice = 0;
@@ -46,10 +52,11 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // Menu navigation
         // Up
-        if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
+        if(onLanguageMenu == false)
+        {
+            if (Input.GetAxis("Vertical") > 0.0f && onHold == true)
             {
                 clickSound.Play();
                 if (indice == 0)
@@ -90,18 +97,22 @@ public class MainMenu : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
 
-            if(Input.GetKeyDown(KeyCode.JoystickButton0))
-            {
-                usingControllerIsActive.SetActive(true);
-            }
-            else
-                usingControllerIsActive.SetActive(false);
-            clickSound.Play();
+                if (Input.GetKeyDown(KeyCode.JoystickButton0))
+                {
+                    usingControllerIsActive.SetActive(true);
+                }
+                else
+                    usingControllerIsActive.SetActive(false);
+                clickSound.Play();
                 if (buttonList[indice] == startGame)
                 {
                     Time.timeScale = 1;
                     SceneManager.LoadScene("SpanishScene");
-            }
+                }
+                else if (buttonList[indice] == language)
+                {
+                    languageGo.SetActive(true);
+                }
                 else if (buttonList[indice] == exitGame)
                 {
                     Application.Quit();
@@ -111,6 +122,7 @@ public class MainMenu : MonoBehaviour
             {
                 onHold = true;
             }
+        }
     }
 
     public void OnMouseOverContinue()
@@ -123,13 +135,23 @@ public class MainMenu : MonoBehaviour
             imageList[indice].gameObject.SetActive(true);
         }
     }
-    public void OnMouseOverExitGame()
+    public void OnMouseOverLanguage()
     {
         if (indice != 1)
         {
             clickSound.Play();
             imageList[indice].gameObject.SetActive(false);
             indice = 1;
+            imageList[indice].gameObject.SetActive(true);
+        }
+    }
+    public void OnMouseOverExitGame()
+    {
+        if (indice != 2)
+        {
+            clickSound.Play();
+            imageList[indice].gameObject.SetActive(false);
+            indice = 2;
             imageList[indice].gameObject.SetActive(true);
         }
     }

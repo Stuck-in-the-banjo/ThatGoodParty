@@ -30,4 +30,10 @@ public class ButtonManager : MonoBehaviour {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void MainMenuENG(string newGameLevel)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenuEN");
+    }
 }
