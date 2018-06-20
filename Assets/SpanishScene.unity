@@ -4502,12 +4502,12 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[1].NPC_name
-      value: Lara Renton
+      value: Pelotudo
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: "\xBFOtra vez pidiendo? \n\xBFQu\xE9 quieres? \n"
+      value: "El universo es infinito \xB7_\xB7"
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4568,7 +4568,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[2].NPC_name
-      value: Lara Renton
+      value: Pelotudo
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4634,7 +4634,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[3].NPC_name
-      value: Lara Renton
+      value: Pelotudo
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4705,7 +4705,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: '...'
+      value: "\xA1INFINITO!"
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4786,6 +4786,21 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[0].NPC_name
+      value: Pelotudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
+        type: 2}
+      propertyPath: secondRound.Array.data[1].NPC_name
+      value: Pelotudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
+        type: 2}
+      propertyPath: secondRound.Array.data[2].NPC_name
+      value: Pelotudo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
+        type: 2}
+      propertyPath: secondRound.Array.data[3].NPC_name
       value: Pelotudo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22872,7 +22887,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[4]
-      value: "\xA1Ah, no!\xA1No te preocupes! Lo llevo bien. "
+      value: "\xA1Ah, no! \xA1No te preocupes! Lo llevo bien. "
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -22899,7 +22914,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[9]
-      value: '* coge algo de machismo *'
+      value: '* agarra de eso *'
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -26156,7 +26171,7 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -26248,18 +26263,17 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: Estoy flipandoooooOOOoooOoOooooOOooo
+      value: Acabo de probar eso y estoy flipando.
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: "Adem\xE1s aqu\xED todo cristo te da esa cosita tan buena. \n\xA1Quiero
-        m\xE1s, tron!"
+      value: 'Lo siento pero no creo que un pato entienda lo que estoy diciendo. '
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
-      value: Vamos, me quiero meter hasta partirme la cabeza...
+      value: "\xA1D\xE9jame en paz pato que escucha!"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -40730,7 +40744,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -40843,7 +40857,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[5]
-      value: Uno tiene sus obligaciones
+      value: Uno tiene sus obligaciones.
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -40878,29 +40892,30 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: "No has venido nunca, \xBFno? \n\n\xA1Se nota! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
-        type: 2}
-      propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
       value: "S\xF3lo es que no ten\xEDa dinero para pagar la uni, y la he tenido
         que dejar. "
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
-      propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
       value: "Pero bueno... a\xFAn tengo suficiente pasta como para estar unos d\xEDas
-        aqu\xED. \r"
+        por aqu\xED. \r"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
-      propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
       value: "\xBFQu\xE9 m\xE1s puedo pedir?... "
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
-      propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
       value: "\xBFC\xF3mo?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
+      value: "\xBFQuieres m\xE1s? Bueno... lo siento pero no me queda m\xE1s.\r\n\r\nSi
+        consigo algo m\xE1s te aviso."
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -40983,7 +40998,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: "No deber\xEDas tomar m\xE1s de esto... \xBFsabes? \r"
+      value: Take it easy hermano.
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -42315,18 +42330,19 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
-      value: "O te hundo la vida. Que soy broker, \xBFsabes?\n"
+      value: 'O te hundo la vida.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[4]
-      value: "Bueno... lo era. \n"
+      value: "\xBFEh? No, a\xFAn no me ha llegado eso. P\xE1sate despu\xE9s."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[5]
-      value: "Descubr\xED esta peque\xF1a joya y empec\xE9 a arrasar con todo Wall
-        Street. Pero me pas\xE9... "
+      value: Dale duro nen.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -42488,7 +42504,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: . . .
+      value: Dale duro nen.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
