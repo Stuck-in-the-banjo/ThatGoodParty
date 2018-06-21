@@ -1228,7 +1228,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Videogame by
 
-    Eric Sola and Fran Ruiz'
+    Fran Ruiz and Eric Sola'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,

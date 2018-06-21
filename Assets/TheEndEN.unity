@@ -2143,7 +2143,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Videogame by Eric Sola and Fran Ruiz\n\nDialogues:                                               Biel
+  m_text: "Videogame by Fran Ruiz and Eric Sola\n\nDialogues:                                               Biel
     Estelrich\nEnglish translation:                 Rebeca Reinosa\nPsychedelic blues
     song:             Danny James\n\n\nSpecial thanks to:     \nSebastian Rojo  \nLuis
     Franze\n"

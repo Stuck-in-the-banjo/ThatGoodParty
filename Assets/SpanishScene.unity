@@ -4502,7 +4502,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[1].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4568,7 +4568,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[2].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4634,7 +4634,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[3].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4771,7 +4771,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[0].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -4786,22 +4786,22 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[0].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[1].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[2].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[3].NPC_name
-      value: Pelotudo
+      value: Manuka
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -23016,7 +23016,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
-      value: "Tambi\xE9n s\xE9 que no eres m\xE1s que un yonkie de mierda."
+      value: "Tambi\xE9n s\xE9 que no eres m\xE1s que un yonki de mierda."
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
