@@ -937,7 +937,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Impulso
+  m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 53887986}
-    characterCount: 7
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -3394,7 +3394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.05, y: -16.7}
+  m_AnchoredPosition: {x: -9.991678, y: -16.7}
   m_SizeDelta: {x: 86.78, y: 2.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164887027
@@ -7085,12 +7085,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '      Hablar'
+      value: '  Interact'
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -7114,7 +7114,7 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -7387,7 +7387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -123.6, y: -308}
+  m_AnchoredPosition: {x: -122.69, y: -308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332859319
@@ -7410,7 +7410,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '      Disfrutar'
+  m_text: Enjoy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -7438,8 +7438,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.4
-  m_fontSizeBase: 0.4
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7479,10 +7479,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 332859319}
-    characterCount: 15
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -8252,7 +8252,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Andar
+  m_text: Move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -8321,7 +8321,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 353137874}
-    characterCount: 5
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -8329,7 +8329,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -8403,7 +8403,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -122.7
+      value: -122.6
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -8473,12 +8473,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '     o'
+      value: '   or'
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -8502,7 +8502,7 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -9063,7 +9063,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Impulso:'
+  m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -9132,7 +9132,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 385758740}
-    characterCount: 8
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -9140,7 +9140,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -9445,7 +9445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222.08, y: -234.1}
+  m_AnchoredPosition: {x: -222.08, y: -234.132}
   m_SizeDelta: {x: 0.6, y: 0.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409106108
@@ -10954,7 +10954,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -11556,12 +11556,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '     Hablar'
+      value: '  Interact'
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -11585,7 +11585,7 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -11932,7 +11932,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -16121,7 +16121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.1, y: -1.854701}
+  m_AnchoredPosition: {x: 43.3, y: -1.854701}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634834539
@@ -16631,7 +16631,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '      Hablar'
+  m_text: '  Interact'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -16700,15 +16700,15 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 653954504}
-    characterCount: 12
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 6
+    spaceCount: 2
     wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -16863,7 +16863,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     Hablar'
+  m_text: '  Interact'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -16932,9 +16932,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 664517660}
-    characterCount: 11
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 5
+    spaceCount: 2
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -19170,16 +19170,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &762321119
+--- !u!1 &750204307
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 762321122}
-  - component: {fileID: 762321121}
-  - component: {fileID: 762321120}
+  - component: {fileID: 750204310}
+  - component: {fileID: 750204309}
+  - component: {fileID: 750204308}
   m_Layer: 0
   m_Name: Language
   m_TagString: Untagged
@@ -19187,12 +19187,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &762321120
+--- !u!114 &750204308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 762321119}
+  m_GameObject: {fileID: 750204307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -19219,19 +19219,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spanish
---- !u!222 &762321121
+  m_Text: English
+--- !u!222 &750204309
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 762321119}
---- !u!224 &762321122
+  m_GameObject: {fileID: 750204307}
+--- !u!224 &750204310
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 762321119}
+  m_GameObject: {fileID: 750204307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -22558,7 +22558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.4, y: -16.7}
+  m_AnchoredPosition: {x: -9.991678, y: -16.7}
   m_SizeDelta: {x: 86.78, y: 2.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911125566
@@ -28022,7 +28022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -123.5, y: -308}
+  m_AnchoredPosition: {x: -122.69, y: -308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113597373
@@ -28045,7 +28045,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     Disfrutar'
+  m_text: Enjoy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -28073,8 +28073,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.4
-  m_fontSizeBase: 0.4
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28114,10 +28114,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 1113597373}
-    characterCount: 14
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -28807,7 +28807,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -122.7
+      value: -122.6
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -28877,12 +28877,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: Andar
+      value: Move
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -30250,7 +30250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -123.3, y: -308}
+  m_AnchoredPosition: {x: -122.69, y: -308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216267209
@@ -30273,7 +30273,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     Saltar'
+  m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -30342,10 +30342,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 1216267209}
-    characterCount: 11
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -30717,7 +30717,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -123.3
+      value: -122.69
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -30787,12 +30787,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '     Saltar'
+      value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -30816,12 +30816,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -31783,7 +31783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -122.7, y: -309.39}
+  m_AnchoredPosition: {x: -122.6, y: -309.39}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295299616
@@ -31806,7 +31806,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     o'
+  m_text: '   or'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -31875,9 +31875,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 1295299616}
-    characterCount: 6
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 5
+    spaceCount: 3
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -33228,7 +33228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.2, y: -1.8547363}
+  m_AnchoredPosition: {x: 91.9, y: -1.8547363}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337018889
@@ -33708,7 +33708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222.08, y: -233.9}
+  m_AnchoredPosition: {x: -222.08, y: -234.132}
   m_SizeDelta: {x: 0.6, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348052363
@@ -35272,7 +35272,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Interactuar
+  m_text: Interact
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -35341,7 +35341,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1422955198}
-    characterCount: 11
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -35349,7 +35349,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -36146,7 +36146,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -123.5
+      value: -122.69
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -36216,12 +36216,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '     Disfrutar'
+      value: Enjoy
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 14
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -36245,22 +36245,22 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_fontSize
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_fontSizeBase
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd55a89ce58f9714db61fd683cfccfb0, type: 2}
@@ -36319,7 +36319,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Interactuar:'
+  m_text: 'Interact:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -36388,7 +36388,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1449513327}
-    characterCount: 12
+    characterCount: 9
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -36396,7 +36396,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -37587,7 +37587,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -123.6
+      value: -122.69
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -37657,12 +37657,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '      Disfrutar'
+      value: Enjoy
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -37686,22 +37686,22 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_fontSize
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_fontSizeBase
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd55a89ce58f9714db61fd683cfccfb0, type: 2}
@@ -38189,7 +38189,7 @@ RectTransform:
     type: 2}
   m_PrefabInternal: {fileID: 1152967180}
   m_GameObject: {fileID: 1519288420}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0005704, y: 1.0005704, z: 1.0005704}
   m_Children: []
@@ -38198,7 +38198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -122.7, y: -308}
+  m_AnchoredPosition: {x: -122.6, y: -308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519288422
@@ -38221,7 +38221,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Andar
+  m_text: Move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -38290,7 +38290,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 1519288422}
-    characterCount: 5
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -38454,7 +38454,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -38636,7 +38636,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Aceptar
+  m_text: Accept
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -38705,7 +38705,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1522459885}
-    characterCount: 7
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -38713,7 +38713,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -40057,7 +40057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.95, y: -8.1}
+  m_AnchoredPosition: {x: 42.4, y: -8.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597429744
@@ -40079,7 +40079,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Mover: joystick o d-pad'
+  m_text: 'Move: joystick or keypad'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -40148,7 +40148,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -196.726, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1597429744}
-    characterCount: 23
+    characterCount: 24
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
@@ -40156,7 +40156,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -40581,7 +40581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.41, y: -93.399994}
+  m_AnchoredPosition: {x: 3.500061, y: -93.399994}
   m_SizeDelta: {x: 110.9, y: 37.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614009988
@@ -44494,7 +44494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1, y: -93.399994}
+  m_AnchoredPosition: {x: 3.500061, y: -93.399994}
   m_SizeDelta: {x: 110.9, y: 37.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739062649
@@ -44860,7 +44860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -123.3, y: -308}
+  m_AnchoredPosition: {x: -122.69, y: -308}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755528599
@@ -44883,7 +44883,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '     Saltar'
+  m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -44952,10 +44952,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 195.66393, w: 47.46315}
   m_textInfo:
     textComponent: {fileID: 1755528599}
-    characterCount: 11
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -45035,7 +45035,7 @@ MonoBehaviour:
   interactController: {fileID: 109436846}
   UsingControllerIsActive: {fileID: 1138371983987816, guid: ca639c601c1f6e54eb3f02f344f6a38a,
     type: 2}
-  language: {fileID: 762321120}
+  language: {fileID: 750204308}
   jumpController: {fileID: 235241924}
   jumpPC: {fileID: 545363006}
   enjoyController: {fileID: 1527111326}
@@ -46360,7 +46360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228.5, y: -8.100037}
+  m_AnchoredPosition: {x: 220.5, y: -8.100037}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762068463
@@ -46382,7 +46382,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: o
+  m_text: or
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -46451,7 +46451,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1762068463}
-    characterCount: 1
+    characterCount: 2
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -46459,7 +46459,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -47424,7 +47424,7 @@ Prefab:
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -123.3
+      value: -122.69
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -47494,12 +47494,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_text
-      value: '     Saltar'
+      value: Jump
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224136278478344036, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -47523,12 +47523,12 @@ Prefab:
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114679575154098504, guid: bd55a89ce58f9714db61fd683cfccfb0,
         type: 2}
@@ -49967,7 +49967,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Disfrutar:'
+  m_text: 'Enjoy:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -50036,7 +50036,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 1883358872}
-    characterCount: 10
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -50044,7 +50044,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -50988,7 +50988,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -52899,7 +52899,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Aceptar
+  m_text: Accept
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -52968,7 +52968,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 2035446715}
-    characterCount: 7
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -52976,7 +52976,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -54372,7 +54372,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -55221,7 +55221,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Disfrutar
+  m_text: Enjoy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edb40865f9a5d8e4a8f6a73f2f76d909, type: 2}
   m_sharedMaterial: {fileID: 21441753093761994, guid: edb40865f9a5d8e4a8f6a73f2f76d909,
@@ -55290,7 +55290,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -145.75844, w: -34.77484}
   m_textInfo:
     textComponent: {fileID: 2144743721}
-    characterCount: 9
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -55298,7 +55298,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}

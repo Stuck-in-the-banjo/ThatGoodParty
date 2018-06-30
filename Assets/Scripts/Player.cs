@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     private bool interactDone = false;
     public GameObject UsingControllerIsActive;
     private bool alreadyShownJump = false;
+    public Text language;
 
     public GameObject jumpController;
     public GameObject jumpPC;
@@ -355,7 +357,14 @@ public class Player : MonoBehaviour
         {
             if (dead_timer >= 8.0f)
             {
-                SceneManager.LoadScene("TheEnd");
+                if (language.text == "English")
+                {
+                    SceneManager.LoadScene("TheEndEN");
+                }
+                else
+                {
+                    SceneManager.LoadScene("TheEnd");
+                }    
             }
             else
             {
