@@ -235,7 +235,7 @@ public class Player : MonoBehaviour
             }
 
             //Trip end
-            if (offDrugsReached == true) //Timer (trip_timer >= trips[player_trips])
+            if (offDrugsReached == true || trip_timer >= trips[player_trips]) 
             {
                 //Shader and PP
                 tripOffDrugs = false;
@@ -246,9 +246,9 @@ public class Player : MonoBehaviour
                 rave_music.Play();
                 rave_music.volume = 0.0f;
                 offDrugsReached = false;
-                //trip_timer = 0.0f;
+                trip_timer = 0.0f;
             }
-            //else trip_timer += Time.deltaTime;
+            else trip_timer += Time.deltaTime;
 
             //Debug.Log(waving);
         }
