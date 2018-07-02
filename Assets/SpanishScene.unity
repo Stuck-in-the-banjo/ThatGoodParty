@@ -2471,6 +2471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudColliders: {fileID: 6113813}
+  starRoad: {fileID: 33607989}
   player: {fileID: 1756246347}
 --- !u!23 &145739625
 MeshRenderer:
