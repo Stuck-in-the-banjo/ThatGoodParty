@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
+    public Text language;
     public AudioSource audioSource;
     public AudioSource clickSound;
     public GameObject pauseCanvas;
@@ -168,7 +169,12 @@ public class PauseMenu : MonoBehaviour {
                     else if (buttonList[indice] == restart)
                     {
                         onPause = false;
-                        SceneManager.LoadScene("SpanishScene");
+                        if(language.text == "English")
+                        {
+                            SceneManager.LoadScene("SpanishSceneEN");
+                        }
+                        else
+                            SceneManager.LoadScene("SpanishScene");
                     }
                     else if (buttonList[indice] == mainMenu)
                     {
