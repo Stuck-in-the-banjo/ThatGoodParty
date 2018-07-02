@@ -1103,8 +1103,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 9745306796da4524886501e2b00e3c9f, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 594591633}
+        m_MethodName: NewGameBtnEN
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
