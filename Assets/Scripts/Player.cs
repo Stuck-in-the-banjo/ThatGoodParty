@@ -518,7 +518,7 @@ public class Player : MonoBehaviour
 
             case PLAYER_CONTEXT.TALKING:
 
-                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E) || Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     //Close or next sentence
                     if (dialogue_manager.dialog_finished)
@@ -589,11 +589,11 @@ public class Player : MonoBehaviour
         /*if (Input.GetKeyDown(KeyCode.E))
             player_context = PLAYER_CONTEXT.FREE;*/
 
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
             StartDrug();
 
         if (Input.GetKeyDown(KeyCode.O))
-            player_context = PLAYER_CONTEXT.OFF_DRUGS;
+            player_context = PLAYER_CONTEXT.OFF_DRUGS;*/
     }
 
     public void StartDrug()

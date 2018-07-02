@@ -34286,6 +34286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cc31de9d94c4b41b30ef50d0661ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  language: {fileID: 762321120}
   audioSource: {fileID: 1756246359}
   clickSound: {fileID: 1756246360}
   pauseCanvas: {fileID: 1759215092}
