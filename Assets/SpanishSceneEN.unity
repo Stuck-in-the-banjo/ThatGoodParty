@@ -3186,7 +3186,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: "El universo es infinito \xB7_\xB7"
+      value: "The universe is infinite \xB7_\xB7\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -3252,7 +3252,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: Estamos todos llenos de dudas, estamos todos creando en la oscuridad.
+      value: " \rWe\u2019re all plenty of doubts, we\u2019re all creating in darkness.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -3318,7 +3318,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: '* convulsiones *'
+      value: '* seizures *'
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -3379,22 +3379,22 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[0]
-      value: '* mirada perdida *'
+      value: '* blank stare *'
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: "\xA1INFINITO!"
+      value: "\xA1INFINITE!"
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[2].sentences.Array.data[0]
-      value: "No conf\xEDes en nadie."
+      value: "Don\u2019t trust anyone."
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: secondRound.Array.data[3].sentences.Array.data[0]
-      value: '* convulsiones *'
+      value: '* seizures *'
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -3455,7 +3455,7 @@ Prefab:
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
-      value: "Nadie es libre. Hasta los p\xE1jaros est\xE1n encadenados al cielo."
+      value: Nobody is free. Even birds are chained to the sky.
       objectReference: {fileID: 0}
     - target: {fileID: 114080832098888112, guid: 7810947abd36e434ebdafcbdc916a734,
         type: 2}
@@ -11574,7 +11574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudColliders: {fileID: 1630340145}
-  player: {fileID: 0}
+  player: {fileID: 1756246347}
 --- !u!23 &612071244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18071,7 +18071,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18138,7 +18138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4064909713353092, guid: 1fab7b48c3bcff546b8a92d8ac0046f6, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18153,7 +18153,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[0]
-      value: "\xA1Firmes!"
+      value: "Attention!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18163,56 +18163,56 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: "\xA1Esta mierda es mejor que matar a peque\xF1os cabrones en Vietnam!\n\xBFNo
-        piensas lo mismo? "
+      value: "This shit is better than killing little bastards in Vietnam! \r\nDon\u2019t
+        you think so?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: "S\xED, s\xED. Al principio mola que te cagas. "
+      value: "Yeah, yeah. At first this shit is cool as hell.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
-      value: "Mi mujer me dec\xEDa que lo dejara, pero un par de hostias la pon\xEDan
-        en su sitio. "
+      value: "My wife said to me that I had to leave it, but I punched her and I put
+        her in his place.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
-      value: "Quiz\xE1 por eso tenga esa orden de alejamiento en el buz\xF3n... \xBFEh?"
+      value: "Maybe is for that that I have a restraining order in the mailbox\u2026
+        Huh?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[4]
-      value: "\xA1Ah, no! \xA1No te preocupes! Lo llevo bien. "
+      value: "Oh, don\u2019t worry! I\u2019m doing good.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[5]
-      value: "Ahora puedo venir aqu\xED y pasarme el tiempo que quiera, \xBFsabes?
-        \n\xBFQu\xE9 m\xE1s puedo pedir?... "
+      value: 'Now I can come here and stay as long as I like, you know? '
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[6]
-      value: "\xBFQu\xE9?\xBFQue quieres m\xE1s? \nPero si he visto lo que te ha dado
-        Goofy. "
+      value: "What else can I ask for?...\r\n\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[7]
-      value: "\xBFYa te lo has acabado?... Ja, ja, ja. \nLo entiendo. "
+      value: "What? Do you want more?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[8]
-      value: "Tranquilo, peque\xF1o cabroncete. \nTengo m\xE1s para ti. \nToma."
+      value: "You have already finished it?... Ha ha ha.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[9]
-      value: '* agarra de eso *'
+      value: "I got it. Relax, little bugger.\r\n\nI have more for you. There you
+        go."
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18232,39 +18232,37 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: Hola, maldito chupapollas. Ja, ja, ja.
+      value: "Hello, fucking cocksucking. Ha ha ha.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
-      value: "Vas m\xE1s doblado que el pico de una mesa."
+      value: "You\u2019re really stoned.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: "S\xED, s\xED. Es la hostia. \r\n\r\n\xBFQui\xE9n necesita esposa teniendo
-        esto? \r"
+      value: "Yeah. This is cool as hell.\r\n \r\nWho needs any wife having this?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
-      value: "\xBFQui\xE9n necesita hijos, un perro, una casa junto al mar y un coche
-        de espanto?..."
+      value: "Who needs children, a dog, a house next to the sea and an amazing car?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
-      value: "\xA1Oh, dios! \xBFPero qu\xE9 estoy haciendo?..."
+      value: "Oh God! What am I doing?...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
-      value: "Bueno, al menos siempre tendr\xE9 este maravilloso lugar\u2026"
+      value: "Well, at least I\u2019ll always have this wonderful place\u2026\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
-      value: "P\xEDrate y d\xE9jame con mis cosas."
+      value: "Go away and leave me with my stuff.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18299,33 +18297,33 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: "\xBFOtra vez pidiendo?\r"
+      value: "Asking for again?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
-      value: "\xBFQu\xE9 quieres? No me lo digas. Lo s\xE9 perfectamente."
+      value: "What do you want? Don\u2019t tell me. I know it perfectly.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
-      value: "Tambi\xE9n s\xE9 que no eres m\xE1s que un yonki de mierda."
+      value: "I know it, like I know that you\u2019re just a crappy junkie.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[3]
-      value: "Un interesado que solo va por ah\xED haci\xE9ndose amigo de la gente
-        para pedirle m\xE1s, y m\xE1s... "
+      value: "A selfish who just goes over there making friends to ask for more and
+        more\u2026\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[4]
-      value: "\xBFSigues queriendo m\xE1s? No contestes, s\xE9 que s\xED."
+      value: "Do you still want more? Don\u2019t answer, I know that you want.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[5]
-      value: "Pues no te voy a dar m\xE1s. Par\xE1sito asqueroso."
+      value: "Well, I won\u2019t give you more. Disgusting parasite.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18386,7 +18384,7 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: secondRound.Array.data[3].sentences.Array.data[0]
-      value: "Vete de aqu\xED."
+      value: "Get out of here.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18396,37 +18394,37 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
-      value: "\xA1En posici\xF3n, granuja!\r"
+      value: On point, urchin!
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
-      value: "Ja, ja, ja. Tranqui. No te voy a pegar ning\xFAn tiro... \r"
+      value: "Ha ha ha. Be cool. I won\u2019t shoot you...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
-      value: "Todav\xEDa.\r"
+      value: Yet.
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
-      value: "\xBFEres nuevo, verdad? "
+      value: "You\u2019re new, right?"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[4]
-      value: "Espero que no te lo hayas tomado a pecho.\r"
+      value: "I hope you didn\u2019t take it to heart.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[5]
-      value: "Me gusta saludar a los novatos como lo hac\xEDamos en el ej\xE9rcito.\r"
+      value: "I like waving at novices like we did in the army. \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[6]
-      value: Disfruta de la fiesta cadete.
+      value: "Enjoy the party cadet.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
@@ -18446,10 +18444,12 @@ Prefab:
     - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[1]
-      value: 'Ja, ja, ja, es broma.
-
-
-        De hecho voy doblado.'
+      value: "Ha ha ha. Just kidding.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003312450226422, guid: 1fab7b48c3bcff546b8a92d8ac0046f6,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[10]
+      value: "* grabs some of that *\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fab7b48c3bcff546b8a92d8ac0046f6, type: 2}
@@ -20501,7 +20501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4656648674718360, guid: 4e6ce18663c538c43b8dcdb42240a61f, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -20516,7 +20516,7 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[0]
-      value: Nos vemos luego tron.
+      value: "See you later, mate.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -20526,17 +20526,18 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: Acabo de probar eso y estoy flipando.
+      value: "I\u2019ve just tasted that and I\u2019m freaking out.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: 'Lo siento pero no creo que un pato entienda lo que estoy diciendo. '
+      value: "I\u2019m sorry, but I don\u2019t think that a duck can understand what
+        I\u2019m saying.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
-      value: "\xA1D\xE9jame en paz pato que escucha!"
+      value: "Leave me alone duck that understands!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -20581,46 +20582,44 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: "\xA1Por la virgen, tron!\n\xBFQu\xE9 te pasa, tron? \nVaya coloc\xF3n,
-        \xBFeh, tron? "
+      value: "Mother of God, mate!\r\nWhat\u2019s wrong, mate?\r\nWe\u2019re so high
+        mate, huh?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
-      value: "Adem\xE1s aqu\xED todo cristo te da esa cosita tan buena. \n\xA1Quiero
-        m\xE1s, tron!"
+      value: "In addition, everyone here gives you that good little thing.\r\nI want
+        more, mate!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: Vamos, me quiero meter hasta partirme la cabeza...
+      value: "Come on, I want to be stoned until I bang my head.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
-      value: "\xA1\xBFQu\xE9 hablas, tron?! \nVaya puto colocado."
+      value: "What are you talking about, mate?!\r\nWhat a fucking barmy.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
-      value: "Acabas de llegar y est\xE1s arrasando con lo de todos... "
+      value: "You have just come and you\u2019re making off with everything of everyone.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
-      value: 'No, tron. No hay excusas.
-
-        Pero control, tron, control... '
+      value: "No, mate. No excuses.\r\nBut control, mate, control...\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
-      value: "Claro, claro. Aqu\xED tienes."
+      value: Sure, sure. There you go.
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[7]
-      value: '* agarra algo de eso *'
+      value: '* grabs some of that *'
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -20640,33 +20639,33 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: "\xA1Joder!... \xBFEh? Ah, no. Tranqui. \r"
+      value: Fuck!... Huh? No. Keep calm.
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
-      value: "Realmente estoy aqu\xED porque no encuentro curro por ning\xFAn lado,
-        hostia puta."
+      value: "Actually, I\u2019m here because my parents kicked me out of the house
+        and I don\u2019t find job anywhere, God damn.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
-      value: "Me cago en todo. \xA1Joder!\r\n"
+      value: Holy crap. Fuck!
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[3]
-      value: "Perd\xF3n, perd\xF3n. Se me va la olla. \r\n"
+      value: "Sorry, sorry. I\u2019m going stir-crazy"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[4]
-      value: "\xBFEn serio, tron? No paras, \xBFeh?... \r\n"
+      value: "Really, mate? You don\u2019t stop, right?...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[5]
-      value: "No me queda m\xE1s mierda para ti, busca en otro lado\r."
+      value: "I\u2019m out of shit for you, search it in another place.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -20716,37 +20715,37 @@ Prefab:
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: secondRound.Array.data[3].sentences.Array.data[0]
-      value: "\xA1Fuera!"
+      value: "Fuck off!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
-      value: "\xA1Pero bueno, tron! \xA1Tenemos a un nuevo compi en la sala! "
+      value: "Whoa, mate! We have a new roomie in the room!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
-      value: "\xA1Venga, ven! No le des m\xE1s vueltas. "
+      value: "Come here! Don\u2019t make your head spin!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
-      value: Esto es una fiesta constante.
+      value: "This is a constant party.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
-      value: "\xA1No hay lugar para el aburrimiento ni para los malos rollos! \r"
+      value: "There\u2019s no place here for boredom or bad vibes!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[4]
-      value: "S\xF3lo d\xE9jate llevar y disfruta del viaje. "
+      value: "Just get carried away and enjoy the trip. \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[5]
-      value: Nos vemos luego tron.
+      value: "See you later mate!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114427726098410168, guid: 4e6ce18663c538c43b8dcdb42240a61f,
         type: 2}
@@ -31493,6 +31492,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -31541,7 +31545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4447465875887734, guid: ca8776c258c045d40a4f4f04363371dc, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31561,7 +31565,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[0]
-      value: Paz hermano.
+      value: Peace, brother.
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31571,33 +31575,33 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: "\xA1Hey, bro! \xBFMola, eh?"
+      value: "Hey, bro! It\u2019s cool, huh?"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: Es un chill que te cagas, bro.
+      value: "It\u2019s chill as shit, bro."
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
-      value: "Bff... ojal\xE1 no tuviera que ir a la uni, t\xEDo... Me pasar\xEDa
-        el d\xEDa aqu\xED. \r\n"
+      value: "Fuff... I wish I didn\u2019t have to go to college, man\u2026  I\u2019d
+        spend the day here.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
-      value: "\xBFNo ser\xEDa chulo eso?..."
+      value: "Wouldn\u2019t it be great?..."
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[4]
-      value: "No deber\xEDa tomar m\xE1s de esto... \xBFsabes? \r\n"
+      value: "I shouldn\u2019t take more of this\u2026 You know?"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[5]
-      value: Uno tiene sus obligaciones.
+      value: I have responsibilities.
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31622,39 +31626,39 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: "\xBFEh?... Ah, hola, bro... "
+      value: What?... Oh, hey bro...
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
-      value: "Si\u2026 vuelvo a estar aqu\xED\r\n\r\nAh, no. No te preocupes. \r"
+      value: "Yeah\u2026 I\u2019m here again.\r\n \r\nOh. Don\u2019t worry.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: "S\xF3lo es que no ten\xEDa dinero para pagar la uni, y la he tenido
-        que dejar. "
+      value: "It\u2019s just that I didn\u2019t have money to pay college and I had
+        to drop out of it\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
-      value: "Pero bueno... a\xFAn tengo suficiente pasta como para estar unos d\xEDas
-        por aqu\xED. \r"
+      value: "But it\u2019s okay\u2026 I still have enough money to stay here a few
+        more days.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
-      value: "\xBFQu\xE9 m\xE1s puedo pedir?... "
+      value: "What else can I ask?...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[5]
-      value: "\xBFC\xF3mo?"
+      value: "\xBFWhat?"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[6]
-      value: "\xBFQuieres m\xE1s? Lo siento pero no me queda m\xE1s.\r\n"
+      value: "Do you want more? Well... I\u2019m sorry, but I don\u2019t have more.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31674,38 +31678,39 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: "\xBFQu\xE9 quieres?...\r\n"
+      value: "What do you want?...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
-      value: "\xBFQu\xE9? \xBFOtra vez pidiendo? \r\n\r\n\xA1Por dios! No paras.\r"
+      value: "What? You\u2019re asking for again?\r\n \r\nMy gosh! You don\u2019t
+        stop.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
-      value: "Eres un maldito aprovechado. \r"
+      value: "You\u2019re a fucking gold-digger.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[3]
-      value: "Te he estado observando y no haces m\xE1s que met\xE9rtelo todo. \r"
+      value: "I\u2019ve been watching you and you\u2019re just doing all the drugs.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[4]
-      value: "\xA1Ni te has interesado en ayudarme!\r"
+      value: "You didn\u2019t try to help me at all!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[5]
-      value: "\xBFSabes qu\xE9? Paso de darte una mierda. \r"
+      value: "You know what? I won\u2019t give you a shit.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[6]
-      value: "Paso de esta puta mierda. \r\nVamos. \xA1Ve a buscar a otro que si te
-        de por pena!\r"
+      value: "Count me out of that fucking shit.\r\nCome on. Go away and find other
+        who gives you drugs out of pity!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31720,7 +31725,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[7]
-      value: Recuerda que no me sale gratis.
+      value: "Remember that it\u2019s not free for me."
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31735,7 +31740,7 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: Take it easy hermano.
+      value: "Take it easy brother.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
@@ -31757,7 +31762,48 @@ Prefab:
     - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
         type: 2}
       propertyPath: secondRound.Array.data[3].sentences.Array.data[0]
-      value: "\xA1Que te vayas, que no tengo m\xE1s!"
+      value: "Go away! I don\u2019t have more!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
+      value: Hey, bro! What a good trip!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
+      value: "You have come! I don\u2019t know who you are... but anybody is welcome
+        here.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
+      value: "You haven\u2019t been here before, right?\r\n \r\nIt seems!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
+      value: "This place is life, brother.\r\nThere are good vibes and zero problems.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[4]
+      value: "Do you want to see what I\u2019m talking about?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[5]
+      value: "Just go with the flow and enjoy the trip.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[6]
+      value: "Take what\u2019s left.  It will change your life!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114120892635065696, guid: ca8776c258c045d40a4f4f04363371dc,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[7]
+      value: '* takes some change of life *'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca8776c258c045d40a4f4f04363371dc, type: 2}
@@ -32587,7 +32633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4004786418254940, guid: 3dc9f4074976a1041b5df72ad4e6acdd, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32602,7 +32648,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: secondRound.Array.data[0].sentences.Array.data[0]
-      value: Pim, pam, pum, bocadillo de pato :v
+      value: "Better the devil you know than the\u2026 duck you don\u2019t know :v"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32612,36 +32658,33 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
-      value: "\xA1Pero qu\xE9 pasa, puto pardillo! \n\nVas m\xE1s ciego que un topo. "
+      value: "What\u2019s up, fucking chump!\r\n \r\nYou\u2019re so high!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: "\xA1No me mires, topo, que te meto! \n\nEs co\xF1a xD. S\xE9 que eres
-        un pato. "
+      value: "Don\u2019t look at me or I\u2019ll thump you, insect!\r\n \r\nJust kidding
+        xD. I know that you\u2019re a duck.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
-      value: "Pero si me tocas s\xED que te meto, \xBFvale pato pardillo? \nTe lo
-        juro. \n"
+      value: "But if you touch me I\u2019ll kick you, alright druggy ducky?\r\nI swear.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
-      value: 'O te hundo la vida.
-
-'
+      value: "I\u2019ll ruin your life."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[4]
-      value: "\xBFEh? No, a\xFAn no me ha llegado eso. P\xE1sate despu\xE9s."
+      value: "What? Oh, no, I don\u2019t have any of that yet, come back later.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[5]
-      value: Dale duro nen.
+      value: Hit it hard, dude.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32677,24 +32720,24 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
-      value: "\xA1Eh, peque\xF1o chupapollas! \xBFCu\xE1ndo me devolver\xE1s lo que
-        te di?..."
+      value: Hey, little cocksucker! When are you supposed to give me back what I
+        gave you?
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
-      value: "No te voy a dar una mierda gratis. Soy broker, t\xEDo. Yo siempre cobro
-        mis deudas. "
+      value: "I won\u2019t give you a shit for free. I\u2019m broker, man. I always
+        collect my debts."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
-      value: "Ah, \xBFQue al final no te di nada?"
+      value: "Oh, didn\u2019t I give you anything?"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
-      value: "Vale, vale, tranqui. Pero \xE1ndate con ojo...\n"
+      value: "Okay, okay, keep calm. But watch out\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32741,44 +32784,45 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
-      value: "\xA1Me cago en todo lo cagable, peque\xF1o chupapollas! \r"
+      value: Holy crap, little cocksucking!
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
-      value: "Por fin te encuentro. M\xE1s te vale darme todo lo que me debes y los
-        intereses."
+      value: "I\u2019ve finally found you. You\u2019d better give me all that you
+        owe me with interest."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
-      value: No soy de los que les gustan que jueguen con ellos...
+      value: "I\u2019m not the type of guy that like being a toy for the rest\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[3]
-      value: "\xBFQue no te di nada? Joder... Bueno, me cago en mi puta cabeza hermano."
+      value: "What? I didn\u2019t give you anything? Fuck\u2026 Holy shit, man."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[4]
-      value: "Bueno toma, s\xE9 que ven\xEDas a por esto."
+      value: Alright, here you have, I know that you have come for this.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[5]
-      value: "Pero si tardas mucho en pagarme la pasta, mis amigos te har\xE1n una
-        visita no muy agradable."
+      value: "But if it takes you so long for paying me, my friends will visit you,
+        and they aren\u2019t very friendly.  "
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[6]
-      value: "Y ahora toma,. Pero recuerda: cuanto m\xE1s tardes, m\xE1s caro lo pagar\xE1s."
+      value: "And now\u2026 Take that\u2026 But remember, if it takes so long for
+        you, you\u2019ll pay at a high price."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[7]
-      value: '* lanza eso sobre ti *'
+      value: '* throws that over your head *'
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32803,7 +32847,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: secondRound.Array.data[1].sentences.Array.data[0]
-      value: Dale duro nen.
+      value: Hit it hard, dude.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32813,7 +32857,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: secondRound.Array.data[2].sentences.Array.data[0]
-      value: Te estoy vigilando.
+      value: "I\u2019m watching you..."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
@@ -32823,49 +32867,49 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: secondRound.Array.data[3].sentences.Array.data[0]
-      value: El bosque tiene ojos, lleva cuidado.
+      value: The forest has eyes, be careful.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
-      value: "\xA1Mira qui\xE9n va! Un peque\xF1o chupapollas novatillo. \r\n"
+      value: Hey, look! A little rookie cocksucking.
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
-      value: "\xBFQu\xE9 tal est\xE1s? Perdona mis modales.\r\n"
+      value: "How are you? Excuse my manners\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
-      value: "Es el rito de iniciaci\xF3n que tenemos en Wall Street, ya sabes... "
+      value: "It\u2019s the rite of passage that we have in Wall Street, you know\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
-      value: "\xBFEh?... \r\n\r\nS\xED, s\xED. Soy broker. Flipas"
+      value: "Huh?...\r\n \r\nOh, yes. I\u2019m broker. Flip out.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[4]
-      value: "\xBFEh? Pues te dir\xE9 que no lo podr\xEDa haber conseguido si no hubiese
-        encontrado jam\xE1s este lugar. "
+      value: "Hmm? Well, I must say that I hadn\u2019t managed it if I hadn\u2019t
+        never found this place."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[5]
-      value: "\xA1Como lo oyes!"
+      value: "You\u2019d better believe it!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[6]
-      value: "\rEste sitio est\xE1 lleno de gente con talento.\n"
+      value: "This place is full of talented people.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[7]
-      value: "Lo siento novatillo, ahora no me queda m\xE1s de eso, pero deber\xEDa
-        llegarme m\xE1s tarde, p\xE1sate y pregunta luego.\r\n"
+      value: "Sorry tiny rookie, I don\u2019t have more of that right now, but I should
+        have more later, come back and ask later."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
