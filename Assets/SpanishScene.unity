@@ -31518,7 +31518,7 @@ Prefab:
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
       propertyPath: dialogues.Array.data[3].sentences.Array.data[6]
-      value: "Y ahora toma,. Pero recuerda: cuanto m\xE1s tardes, m\xE1s caro lo pagar\xE1s."
+      value: "Y ahora toma, pero recuerda: cuanto m\xE1s tardes, m\xE1s caro lo pagar\xE1s."
       objectReference: {fileID: 0}
     - target: {fileID: 114929421477604242, guid: 3dc9f4074976a1041b5df72ad4e6acdd,
         type: 2}
