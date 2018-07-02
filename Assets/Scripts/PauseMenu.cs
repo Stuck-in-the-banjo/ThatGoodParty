@@ -180,11 +180,18 @@ public class PauseMenu : MonoBehaviour {
                     {
                         onPause = false;
                         Time.timeScale = 1;
-                        SceneManager.LoadScene("MainMenu");
+                        if (language.text == "English")
+                        {
+                            SceneManager.LoadScene("MainMenuEN");
+                        }
+                        else
+                            SceneManager.LoadScene("MainMenu");
+
                     }
                     else if (buttonList[indice] == exitGame)
                     {
                         onPause = false;
+                        Application.OpenURL("https://botttos.itch.io/thatgoodparty");
                         Application.Quit();
                     }
                     else if (buttonList[indice] == controls)

@@ -116,6 +116,7 @@ public class MainMenu : MonoBehaviour
                 }
                 else if (buttonList[indice] == exitGame)
                 {
+                    Application.OpenURL("https://botttos.itch.io/thatgoodparty");
                     Application.Quit();
                 }
             }

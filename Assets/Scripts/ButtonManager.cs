@@ -18,6 +18,7 @@ public class ButtonManager : MonoBehaviour {
 
     public void ExitgameBtn()
     {
+        Application.OpenURL("https://botttos.itch.io/thatgoodparty");
         Application.Quit();
     }
 
