@@ -135,6 +135,7 @@ public class EndMenu : MonoBehaviour
             }
             else if (buttonList[indice] == exitGame)
             {
+                Application.OpenURL("https://botttos.itch.io/thatgoodparty");
                 Application.Quit();
             }
             else if (buttonList[indice] == franTwitter)
